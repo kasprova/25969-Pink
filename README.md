@@ -1,7 +1,7 @@
 # Проект «Pink»
 
 * Студент: [An__Ka](https://htmlacademy.ru/profile/id25969).
-* Наставник: `Unknown`.
+* Наставник: [Evgeny Sergeev](https://htmlacademy.ru/profile/id18983).
 
 --
 
