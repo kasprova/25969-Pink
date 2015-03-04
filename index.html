@@ -1,15 +1,222 @@
 <!DOCTYPE html>
 <html lang="ru">
 
+
+
 <head>
   <meta charset="utf-8">
   <title>HTML Academy: Pink</title>
-  <!-- <link rel="stylesheet" href="css/style.css"> -->
+  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
+
 
 <body>
 
-  <p>Репозиторий создан для обучения на продвинутом онлайн-интенсиве «<a href="https://htmlacademy.ru/advanced_intensive">Создание веб-интерфейсов с помощью HTML и CSS</a>».</p>
+
+
+    <header class="page-header">
+      
+      <div class="page-header__inner-wrapper">
+
+      	<div class="page-header__row clearfix">
+          
+          <div class="page-header__logo"><a href="#" class="page-header__logo-link">PINK</a></div> 
+            
+          <nav class="page-header__nav">
+            <a class="page-header__trigger" href="#">
+              <ul class="main-nav__list">
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Информация</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Возможности</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Стоимость</a>
+              </li>
+              <li class="main-nav__item">
+                <a href="#" class="main-nav__link">Отзывы</a>
+              </li>
+              </ul>
+            </a>
+          </nav>
+        
+        </div>
+        
+        <p class="page-header__text">Взгляните на жизнь иначе!</p>  
+          
+      </div>
+
+    </header>
+
+
+
+    <div class="page-content">
+
+      <section class="download">
+        <div class="download__inner-wrapper">
+
+  		    <div class="download__btn">Скачать приложение</div>        
+          <div class="download__apps">  
+            <a href="#" class="download__apps-apple" title="iOS" download></a>
+            <a href="#" class="download__apps-android" title="Android" download></a>
+            <a href="#" class="download__apps-windows" title="Windows Mobile" download></a>
+          </div>  
+          <p class="download__text">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
+        </div> 
+      </section>
+
+    
+
+      <section class="promo">
+        
+ 	      <div class="promo__inner-wrapper">
+      
+          <div class="promo__header">
+            <p class="promo__header-h2">Устали от серости мегаполиса?</p>
+            <p class="promo__header-h2">Нам есть, что вам предложить!</p>
+          </div>
+          
+          <div class="promo__decoration"></div>  
+
+          <div class="promo__container">
+            <ul class="promo__list">
+              <li class="promo__item">
+                <h2 class="promo__name">Поднимает настроение</h2>
+                <p class="promo__detail">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
+              </li>
+              <li class="promo__item">
+                <h2 class="promo__name">Меняет мир вокруг</h2>
+                <p class="promo__detail">Сделайте снимок и украсьте его смайликомили текстовой подписью, чтобы усилить эффект</p>
+              </li>
+              <li class="promo__item">
+                <h2 class="promo__name">Заводит новых друзей </h2>
+                <p class="promo__detail">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
+              </li>
+            </ul>
+        
+   	        <div class="promo__illustration"></div>
+          </div>
+ 	      </div>
+
+      </section>
+
+       
+
+      <section class="review">   
+
+      	<div class="review__inner-wrapper"> 
+
+      	  <div class="review__slider">       
+
+    		    <div class="review__slides">
+	      	  
+	      	    <div class="review__slide  review__slide--active">
+ 	            
+                <p class="review__author"><strong>Николай Петров</strong></p>
+ 	            
+                <blockquote class="review__blockquote">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+ 	          
+              </div>
+<!-- slider -->            
+<!--             <div class="review__slide review__slide--active">
+                               <p class="review__author"><strong>Николай Петров</strong></p>
+                               <blockquote class="review__blockquote">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+                             </div>
+                
+                <div class="review__slide review__slide--active">
+                               <p class="review__author"><strong>Николай Петров</strong></p>
+                               <blockquote class="review__blockquote">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+                             </div>     -->         				
+
+          
+              <div class="review__slider-controls">
+
+                <span class="review__controls-item  review__controls-item--active"></span>
+                <span class="review__controls-item"></span>
+                <span class="review__controls-item"></span>
+            
+              </div>
+            </div>
+            <div class="review__decoration"></div>
+  		    </div>
+ 	      </div>
+      </section>
+    
+
+
+      <section class="price">
+      	<div class="price__inner-wrapper"> 
+      	  <div class="price__slider">
+	
+            <table class="price__item-table">
+              <tr class="price__item">
+                <th class="price__name  price__name--active">
+                  <p><strong>Стандарт</strong></p>
+                  <p>3.99 USD</p>
+                </th>
+              </tr>
+              <tr class="price__detail">
+                <td class="price__item-detail">Розовый фильтр</td>
+              </tr>
+              <tr class="price__detail">
+                <td class="price__item-detail">Смайлики</td>
+              </tr>
+              <tr class="price__detail">
+                <td class="price__item-detail">Комментарии</td>
+              </tr>
+            </table>
+      
+            <div class="price__slider-controls">
+              <span class="price__controls-item"></span>
+              <span class="price__controls-item  price__controls-item--active"></span>
+              <span class="price__controls-item"></span>
+            </div>
+
+          </div>
+        </div>  
+      </section>
+
+    </div>  
+      
+    
+
+    <footer class="page-footer">
+
+		  <div class="page-footer__inner-wrapper">
+        <div class="page-footer__map" id="map">
+     	    <section class="contacts">
+    
+     	      <h2 class="contacts__header-h2">Остались вопросы? Свяжитесь с нами!</h2>   	        
+     	      <ul class="contacts__list">
+     	        <li class="contacts__item">
+     	          <p class="contacts__name"><strong>Звоните:</strong></p>
+     	       	  <p class="contacts__detail">8 (800) 1000 900</p>
+     	        </li>
+     	        <li class="contacts__item">
+     	          <p class="contacts__name"><strong>Пишите:</strong></p>
+     	          <p class="contacts__detail"><a class="contacts__email" href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a></p>
+     	        </li>
+     	        <li class="contacts__item">
+     	          <p class="contacts__name"><strong>Приезжайте в гости:</strong></p>
+     	          <p class="contacts__detail">Санкт-Петербург,<br> Невский проспект, д. 20</p>
+     	        </li>
+     	      </ul>  	        
+            <div class="contacts__decoration  clearfix">
+              <div class="contacts__decoration--left-diagonal"></div>
+              <div class="contacts__decoration--right-diagonal"></div>
+            </div> 
+   	      </section>
+
+          <div class="page-footer__pin"></div>
+
+        </div> 
+
+		  </div>
+
+    </footer>
 
   <!-- <script src="js/script.js"></script> -->
 
