@@ -1,0 +1,31 @@
+// page-footer:
+
+.page-footer {
+  &__inner-wrapper{
+    margin: 0 auto;
+    width: 320px;
+    padding: 0;
+  }
+
+  &__map {
+    background-image: url("@{patch}/bg-map.png");
+    height: 645px;
+    position: relative;
+    top:-445px;
+    z-index: -1;
+  }
+
+  &__pin {
+    position: absolute;
+    bottom: 70px;
+    left: 140px;
+    width: 36px;
+    height: 36px;
+    background-color: @text-color-pink;
+    border: 10px solid #fff;
+    box-shadow: -2px 2px 2px 0 #aaa;
+    border-radius: 50%;
+  }
+}
+
+//------------------------- end of footer ----------------//

@@ -3,50 +3,53 @@
 
 
 
-<head>
-  <meta charset="utf-8">
-  <title>HTML Academy: Pink</title>
-  <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=320">
+    <title>HTML Academy: Pink</title>
+
+    <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="css/style.css">
-</head>
+
+  </head>
 
 
 
-<body>
+  <body>
 
+  <header class="page-header">
 
-
-    <header class="page-header">
-      
       <div class="page-header__inner-wrapper">
 
-      	<div class="page-header__row clearfix">
-          
+        <div class="page-header__row  clearfix">
+
           <div class="page-header__logo"><a href="#" class="page-header__logo-link">PINK</a></div> 
-            
-          <nav class="page-header__nav">
-            <a class="page-header__trigger" href="#">
-              <ul class="main-nav__list">
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Информация</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Возможности</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Стоимость</a>
-              </li>
-              <li class="main-nav__item">
-                <a href="#" class="main-nav__link">Отзывы</a>
-              </li>
-              </ul>
-            </a>
-          </nav>
-        
-        </div>
-        
-        <p class="page-header__text">Взгляните на жизнь иначе!</p>  
+
+          <a class="page-header__trigger" href="#"></a>
           
+          <nav class="main-nav">
+            
+            <ul class="main-nav__list">
+            
+            <li class="main-nav__item">
+              <a href="#promo" class="main-nav__link">Информация</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#features" class="main-nav__link">Возможности</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#price" class="main-nav__link">Стоимость</a>
+            </li>
+            <li class="main-nav__item">
+              <a href="#review" class="main-nav__link">Отзывы</a>
+            </li>
+            </ul>
+          </nav>
+
+        </div>
+
+        <p class="page-header__text">Взгляните на жизнь иначе!</p>  
+
       </div>
 
     </header>
@@ -58,167 +61,189 @@
       <section class="download">
         <div class="download__inner-wrapper">
 
-  		    <div class="download__btn">Скачать приложение</div>        
-          <div class="download__apps">  
-            <a href="#" class="download__apps-apple" title="iOS" download></a>
-            <a href="#" class="download__apps-android" title="Android" download></a>
-            <a href="#" class="download__apps-windows" title="Windows Mobile" download></a>
-          </div>  
+          <div class="download__btn">Скачать приложение</div>
+          <div class="download__icons"></div>
           <p class="download__text">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
         </div> 
       </section>
 
-    
 
-      <section class="promo">
-        
- 	      <div class="promo__inner-wrapper">
-      
+      <section class="promo" id="promo">
+
+        <div class="promo__inner-wrapper">
+
           <div class="promo__header">
+
             <p class="promo__header-h2">Устали от серости мегаполиса?</p>
             <p class="promo__header-h2">Нам есть, что вам предложить!</p>
-          </div>
-          
-          <div class="promo__decoration"></div>  
 
-          <div class="promo__container">
+          </div>
+
+          <div class="promo__container" id="features">
+
             <ul class="promo__list">
+
               <li class="promo__item">
                 <h2 class="promo__name">Поднимает настроение</h2>
                 <p class="promo__detail">Приложение позволит вам победить осеннюю хандру и деперессию буквально в несколько кликов!</p>
               </li>
+
               <li class="promo__item">
                 <h2 class="promo__name">Меняет мир вокруг</h2>
                 <p class="promo__detail">Сделайте снимок и украсьте его смайликомили текстовой подписью, чтобы усилить эффект</p>
               </li>
+
               <li class="promo__item">
                 <h2 class="promo__name">Заводит новых друзей </h2>
                 <p class="promo__detail">Ставьте лайки, комментируте, делитесь фотографиями с друзьями и заводите новых</p>
               </li>
+
             </ul>
-        
-   	        <div class="promo__illustration"></div>
+
           </div>
- 	      </div>
+
+        </div>
 
       </section>
 
-       
 
-      <section class="review">   
 
-      	<div class="review__inner-wrapper"> 
+      <section class="review" id="review">
 
-      	  <div class="review__slider">       
+        <div class="review__inner-wrapper">
 
-    		    <div class="review__slides">
-	      	  
-	      	    <div class="review__slide  review__slide--active">
- 	            
+          <div class="review__slider">
+
+
+
+            <div class="review__slides">
+
+              <div class="review__slide  review__slide--current">
+
                 <p class="review__author"><strong>Николай Петров</strong></p>
- 	            
                 <blockquote class="review__blockquote">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
- 	          
+
               </div>
-<!-- slider -->            
-<!--             <div class="review__slide review__slide--active">
+
+<!--             <div class="review__slide review__slide--next">
                                <p class="review__author"><strong>Николай Петров</strong></p>
                                <blockquote class="review__blockquote">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
                              </div>
-                
-                <div class="review__slide review__slide--active">
+
+                <div class="review__slide review__slide--last">
                                <p class="review__author"><strong>Николай Петров</strong></p>
                                <blockquote class="review__blockquote">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
-                             </div>     -->         				
+                             </div>-->
 
-          
-              <div class="review__slider-controls">
 
-                <span class="review__controls-item  review__controls-item--active"></span>
-                <span class="review__controls-item"></span>
-                <span class="review__controls-item"></span>
-            
-              </div>
             </div>
-            <div class="review__decoration"></div>
-  		    </div>
- 	      </div>
-      </section>
-    
-
-
-      <section class="price">
-      	<div class="price__inner-wrapper"> 
-      	  <div class="price__slider">
-	
-            <table class="price__item-table">
-              <tr class="price__item">
-                <th class="price__name  price__name--active">
-                  <p><strong>Стандарт</strong></p>
-                  <p>3.99 USD</p>
-                </th>
-              </tr>
-              <tr class="price__detail">
-                <td class="price__item-detail">Розовый фильтр</td>
-              </tr>
-              <tr class="price__detail">
-                <td class="price__item-detail">Смайлики</td>
-              </tr>
-              <tr class="price__detail">
-                <td class="price__item-detail">Комментарии</td>
-              </tr>
-            </table>
-      
-            <div class="price__slider-controls">
-              <span class="price__controls-item"></span>
-              <span class="price__controls-item  price__controls-item--active"></span>
-              <span class="price__controls-item"></span>
+              
+            <div class="slider-control">
+              <span class="slider-control__item  slider-control__item--current"></span>
+              <span class="slider-control__item"></span>
+              <span class="slider-control__item"></span>
             </div>
 
           </div>
+        </div>
+      </section>
+
+
+
+      <section class="price" id="price">
+        <div class="price__inner-wrapper"> 
+          <div class="price__slider clearfix">
+            
+            <div class="price__item price__item--first">
+              
+              <h2 class="price__name">Стандарт <span class="price__cost">3,99 USD</span></h2>
+              
+              <ul class="price__options">
+                <li class="price__option price__option--enabled">Розовый фильтр</li>
+                <li class="price__option price__option--disabled">Смайлики</li>
+                <li class="price__option price__option--disabled">Комментарии</li>
+              </ul>
+            
+            </div>
+            
+            <div class="price__item price__item--current">
+              
+              <h2 class="price__name  price__name--hit">Стандарт <span class="price__cost">3,99 USD</span></h2>
+              
+              <ul class="price__options">
+                <li class="price__option price__option--enabled">Розовый фильтр</li>
+                <li class="price__option price__option--enabled">Смайлики</li>
+                <li class="price__option price__option--disabled">Комментарии</li>
+              </ul>
+            
+            </div>
+            
+            <div class="price__item price__item--last">
+              
+              <h2 class="price__name">Стандарт <span class="price__cost">3,99 USD</span></h2>
+              
+              <ul class="price__options">
+                <li class="price__option price__option--enabled">Розовый фильтр</li>
+                <li class="price__option price__option--enabled">Смайлики</li>
+                <li class="price__option price__option--enabled">Комментарии</li>
+              </ul>
+            
+            </div>
+          
+          </div>  
+
+          <div class="slider-control">
+            <span class="slider-control__item"></span>
+            <span class="slider-control__item  slider-control__item--current"></span>
+            <span class="slider-control__item"></span>
+          </div>
+
         </div>  
       </section>
 
     </div>  
-      
-    
+
+
 
     <footer class="page-footer">
 
-		  <div class="page-footer__inner-wrapper">
+      <div class="page-footer__inner-wrapper">
+        
+        <section class="contacts clearfix">
+          
+          <h2 class="contacts__header-h2">Остались вопросы? Свяжитесь с нами!</h2>            
+          
+          <ul class="contacts__list">
+          
+            <li class="contacts__item">
+              <p class="contacts__name"><strong>Звоните:</strong></p>
+              <p class="contacts__detail">8 (800) 1000 900</p>
+            </li>
+          
+            <li class="contacts__item">
+              <p class="contacts__name"><strong>Пишите:</strong></p>
+              <p class="contacts__detail"><a class="contacts__email" href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a></p>
+            </li>
+          
+            <li class="contacts__item">
+              <p class="contacts__name"><strong>Приезжайте в гости:</strong></p>
+              <p class="contacts__detail">Санкт-Петербург,<br> Невский проспект, д. 20</p>
+            </li>
+          
+          </ul>
+        
+        </section>
+        
         <div class="page-footer__map" id="map">
-     	    <section class="contacts">
-    
-     	      <h2 class="contacts__header-h2">Остались вопросы? Свяжитесь с нами!</h2>   	        
-     	      <ul class="contacts__list">
-     	        <li class="contacts__item">
-     	          <p class="contacts__name"><strong>Звоните:</strong></p>
-     	       	  <p class="contacts__detail">8 (800) 1000 900</p>
-     	        </li>
-     	        <li class="contacts__item">
-     	          <p class="contacts__name"><strong>Пишите:</strong></p>
-     	          <p class="contacts__detail"><a class="contacts__email" href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a></p>
-     	        </li>
-     	        <li class="contacts__item">
-     	          <p class="contacts__name"><strong>Приезжайте в гости:</strong></p>
-     	          <p class="contacts__detail">Санкт-Петербург,<br> Невский проспект, д. 20</p>
-     	        </li>
-     	      </ul>  	        
-            <div class="contacts__decoration  clearfix">
-              <div class="contacts__decoration--left-diagonal"></div>
-              <div class="contacts__decoration--right-diagonal"></div>
-            </div> 
-   	      </section>
-
           <div class="page-footer__pin"></div>
-
-        </div> 
-
-		  </div>
+        </div>  
+      
+      </div>
 
     </footer>
 
   <!-- <script src="js/script.js"></script> -->
 
-</body>
+  </body>
+
 </html>

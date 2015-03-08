@@ -1,0 +1,71 @@
+// page-header:
+
+.page-header {
+  background-image: url("@{patch}/bg-header-iphone.png"), url("@{patch}/bg-header.jpg");
+  background-repeat: no-repeat, no-repeat;
+  background-size: 100%, 100%;
+  background-position: 0 173px, 0 0;
+  height: 458px;
+
+  &__inner-wrapper {
+    width: 320px;
+    margin: 0 auto;
+  }
+
+  &__row {
+    background: rgba(0,0,0,0.3); 
+    padding: 20px 20px;
+    width: 320px;
+    position: fixed;
+    z-index: 100;
+  } 
+  
+  &__logo {
+    display: block;
+    float: left;
+    width: 100px;
+  }
+
+  &__logo-link {
+    display: block;
+    text-decoration: @text-decoration;
+    color: @text-color-white;
+    font-size: 32px;
+    line-height: 24px;
+    text-transform: @text-transform;
+  }
+
+  &__trigger {
+    float:right;
+    display:block;
+    width: 50px;
+    height:24px;
+    border-top: 4px solid @border-color;
+    border-bottom: 4px solid @border-color;
+  }
+
+  &__trigger::before {
+    content:"";
+    position: absolute;
+    top:30px;
+    width: 50px;
+    height: 4px;
+    background: @bg-white;
+  }
+
+
+  &__text {
+    font-size: @text-size-big;
+    color: @text-color-white;
+    font-weight: @font-weight-light;
+    text-align: @text-align;
+    line-height: @line-height;
+    padding-top: 85px;
+    padding-right: 45px;
+    padding-left: 35px;
+    margin: 0 auto;
+  }
+} 
+
+
+//------------------------- end of header ----------------//
