@@ -12,25 +12,29 @@
     padding-bottom: 5px;
   }
 
-  &__item {
-    width: 276px;
-    margin: 0 auto;
-    text-transform: @text-transform;
-
-
-    &--first {
-    position: absolute; 
-    top: 90px;
-    margin-left: -(276px-20px);
-    }
-
-    &--last {
-    position: absolute; 
-    top: 90px;
-    margin-left: (276px+24px);
-
-    }
+  &__slider-wrapper{
+    margin: 0px auto;
+    overflow: hidden;
   }
+
+  &__item {
+    overflow: hidden;
+    display: block;
+    width: 276px;
+    margin: 0;
+    text-transform: @text-transform;
+  }
+
+  &__item::nth-child(1) {
+    transform: translateX(-(276px-20px));
+  }
+  &__item::nth-child(2) {
+    transform: translateX(24px);
+  }
+  &__item::nth-child(3) {
+    transform: translateX((276px+24px));
+  }
+
 
   &__name {
     position: relative;
@@ -115,7 +119,7 @@
     -5deg,
     @bg-light-grey 32px,
     @bg-white 32px
-  ); 
-} 
+  );
+}
 
 //------------------------- end of price ----------------//

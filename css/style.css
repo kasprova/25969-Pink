@@ -385,40 +385,51 @@ body {
   margin: 0 auto;
 }
 .page-header__row {
-  background: rgba(0, 0, 0, 0.3);
+  position: fixed;
   padding: 20px 20px;
   width: 320px;
-  position: fixed;
-  z-index: 100;
+  min-height: 66px;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 100
+  /*     &--opened {
+  display: none;
+  background-color: @text-color-dark-blue;
+} */
+}
+.page-header__container {
+  position: relative;
 }
 .page-header__logo {
   display: block;
-  float: left;
-  width: 100px;
 }
 .page-header__logo-link {
-  display: block;
+  margin: 0;
+  cursor: pointer;
   text-decoration: none;
   color: #ffffff;
   font-size: 32px;
   line-height: 24px;
   text-transform: uppercase;
 }
+.page-header__logo-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
 .page-header__trigger {
-  float: right;
   display: block;
   width: 50px;
   height: 24px;
-  border-top: 4px solid #ffffff;
-  border-bottom: 4px solid #ffffff;
-}
-.page-header__trigger::before {
-  content: "";
   position: absolute;
-  top: 30px;
-  width: 50px;
-  height: 4px;
-  background: #ffffff;
+  top: 0;
+  right: 0;
+  background: url("../img/btn-open.png")
+  /*     &--opened {
+  display: none;
+  width: 23px;
+  height: 22px;
+  background: url("@{patch}/btn-close.png");
+} */
 }
 .page-header__text {
   font-size: 24px;
@@ -432,7 +443,7 @@ body {
   margin: 0 auto;
 }
 .main-nav {
-  /*   display: none; */
+  display: none;
   position: absolute;
   margin-left: -20px;
   width: 320px;
@@ -464,7 +475,7 @@ body {
   background-color: #1d2631;
   color: #ffffff;
   width: 320px;
-  padding-top: 25px;
+  padding-top: 27px;
 }
 .download__inner-wrapper {
   margin: 0 auto;
@@ -473,16 +484,17 @@ body {
 .download__btn {
   display: block;
   width: 280px;
+  margin: 0 auto;
+  margin-bottom: 30px;
+  padding: 15px 35px;
+  color: #ffffff;
+  font-weight: 700;
+  text-align: center;
+  text-decoration: none;
+  font-size: 18px;
   border: 3px solid #ffffff;
   border-radius: 30px;
-  font-weight: 700;
-  padding: 15px 35px;
-  top: 25px;
-  text-align: center;
-  font-size: 18px;
-  margin: 0 auto;
   cursor: pointer;
-  margin-bottom: 30px;
 }
 .download__icons {
   height: 57px;
@@ -576,6 +588,29 @@ body {
   height: 280px;
   margin: 0 25%;
 }
+.review__slider {
+  overflow: hidden;
+}
+.review__slider-wrapper {
+  margin: 0px auto;
+}
+.review__slide {
+  display: inline-block;
+  font-size: 0;
+  width: 320px;
+  overflow: hidden;
+  vertical-align: top;
+}
+.review__slide::nth-child(2) {
+  -webkit-transform: translateX(320px);
+      -ms-transform: translateX(320px);
+          transform: translateX(320px);
+}
+.review__slide::nth-child(3) {
+  -webkit-transform: translateX(640px);
+      -ms-transform: translateX(640px);
+          transform: translateX(640px);
+}
 .review__author {
   color: #000000;
   text-align: center;
@@ -607,20 +642,31 @@ body {
 .price__slider {
   padding-bottom: 5px;
 }
+.price__slider-wrapper {
+  margin: 0px auto;
+  overflow: hidden;
+}
 .price__item {
+  overflow: hidden;
+  display: block;
   width: 276px;
-  margin: 0 auto;
+  margin: 0;
   text-transform: uppercase;
 }
-.price__item--first {
-  position: absolute;
-  top: 90px;
-  margin-left: -256px;
+.price__item::nth-child(1) {
+  -webkit-transform: translateX(-256px);
+      -ms-transform: translateX(-256px);
+          transform: translateX(-256px);
 }
-.price__item--last {
-  position: absolute;
-  top: 90px;
-  margin-left: 300px;
+.price__item::nth-child(2) {
+  -webkit-transform: translateX(24px);
+      -ms-transform: translateX(24px);
+          transform: translateX(24px);
+}
+.price__item::nth-child(3) {
+  -webkit-transform: translateX(300px);
+      -ms-transform: translateX(300px);
+          transform: translateX(300px);
 }
 .price__name {
   position: relative;
@@ -701,10 +747,10 @@ body {
 }
 .page-footer__map {
   background-image: url("../img/bg-map.png");
-  height: 645px;
+  background-position: 50% 100%;
+  height: 212px;
+  width: 100%;
   position: relative;
-  top: -445px;
-  z-index: -1;
 }
 .page-footer__pin {
   position: absolute;
@@ -773,6 +819,7 @@ body {
   width: 160px;
   background-image: -webkit-linear-gradient(79deg, transparent 32px, #ffffff 32px);
   background-image: linear-gradient(11deg, transparent 32px, #ffffff 32px);
+  z-index: 2;
 }
 .contacts::after {
   position: absolute;
@@ -782,9 +829,10 @@ body {
   width: 160px;
   background-image: -webkit-linear-gradient(101deg, transparent 32px, #ffffff 32px);
   background-image: linear-gradient(-11deg, transparent 32px, #ffffff 32px);
+  z-index: 2;
 }
 .slider-control {
-  width: 64px;
+  width: 120px;
   height: 12px;
   padding-top: 30px;
   padding-bottom: 60px;
@@ -803,7 +851,7 @@ body {
   cursor: pointer;
   vertical-align: middle;
 }
-.slider-control__item--current {
+.slider-control__item--active {
   width: 12px;
   height: 12px;
   background-color: #ffffff;

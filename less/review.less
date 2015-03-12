@@ -2,6 +2,30 @@
 
 .review {
 
+  &__slider{
+    overflow: hidden;
+  }
+
+  &__slider-wrapper {
+    margin: 0px auto;
+  }
+
+  &__slide {
+    display: inline-block;
+    font-size: 0;
+    width: 320px;
+    overflow: hidden;
+    vertical-align: top;
+  }
+
+  &__slide::nth-child(2) {
+    transform: translateX(320px);
+  }
+
+  &__slide::nth-child(3) {
+    transform: translateX(320px*2);
+  }
+
   &__author {
     color: @text-color-black;
     text-align: @text-align;
@@ -20,7 +44,7 @@
     line-height: @line-height + 6px;
     margin: 0 auto;
     padding-left: 20px;
-    padding-right: 20px; 
+    padding-right: 20px;
     padding-top: 20px;
   }
 

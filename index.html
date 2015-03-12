@@ -5,7 +5,7 @@
 
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=320">
+    <meta name="viewport" content="width=device-width">
     <title>HTML Academy: Pink</title>
 
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,700&subset=latin,cyrillic,cyrillic-ext" rel="stylesheet" type="text/css">
@@ -21,16 +21,21 @@
 
       <div class="page-header__inner-wrapper">
 
-        <div class="page-header__row  clearfix">
+        <div class="page-header__row  page-header__row--opened">
+          <div class="page-header__container">
+            <div class="page-header__logo">
+              <a href="#" class="page-header__logo-link">
+                <img class="page-header__logo-img" alt="PINK" src="img/icon-logo.png" height="23px" width="74px">
+              </a>
+            </div>
 
-          <div class="page-header__logo"><a href="#" class="page-header__logo-link">PINK</a></div> 
+            <a class="page-header__trigger  page-header__trigger--opened" href="#"></a>
+          </div>
 
-          <a class="page-header__trigger" href="#"></a>
-          
           <nav class="main-nav">
-            
+
             <ul class="main-nav__list">
-            
+
             <li class="main-nav__item">
               <a href="#promo" class="main-nav__link">Информация</a>
             </li>
@@ -48,7 +53,7 @@
 
         </div>
 
-        <p class="page-header__text">Взгляните на жизнь иначе!</p>  
+        <p class="page-header__text">Взгляните на жизнь иначе!</p>
 
       </div>
 
@@ -61,10 +66,10 @@
       <section class="download">
         <div class="download__inner-wrapper">
 
-          <div class="download__btn">Скачать приложение</div>
+          <a href="#" class="download__btn">Скачать приложение</a>
           <div class="download__icons"></div>
           <p class="download__text">Доступно для iPhone, iPad, Android, Windows phone, Mac OS, Windows 8</p>
-        </div> 
+        </div>
       </section>
 
 
@@ -112,138 +117,138 @@
 
         <div class="review__inner-wrapper">
 
+
+
           <div class="review__slider">
 
+            <div class="review__slider-wrapper">
 
-
-            <div class="review__slides">
-
-              <div class="review__slide  review__slide--current">
-
+              <div class="review__slide  review__slide--active">
                 <p class="review__author"><strong>Николай Петров</strong></p>
                 <blockquote class="review__blockquote">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
-
               </div>
 
-<!--             <div class="review__slide review__slide--next">
-                               <p class="review__author"><strong>Николай Петров</strong></p>
-                               <blockquote class="review__blockquote">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
-                             </div>
+              <div class="review__slide">
+                <p class="review__author"><strong>Николай Петров</strong></p>
+                <blockquote class="review__blockquote">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+              </div>
 
-                <div class="review__slide review__slide--last">
-                               <p class="review__author"><strong>Николай Петров</strong></p>
-                               <blockquote class="review__blockquote">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
-                             </div>-->
-
+              <div class="review__slide">
+                <p class="review__author"><strong>Николай Петров</strong></p>
+                <blockquote class="review__blockquote">«Это приложение перевернуло мой мир и позволило по-новому взглянуть на привычные серые вещи! А еще я познакомился со своей будущей женой в комментариях к выложенной фотографии!»</blockquote>
+              </div>
 
             </div>
-              
+
             <div class="slider-control">
-              <span class="slider-control__item  slider-control__item--current"></span>
+              <span class="slider-control__item  slider-control__item--active"></span>
               <span class="slider-control__item"></span>
               <span class="slider-control__item"></span>
             </div>
 
           </div>
+
+
         </div>
       </section>
 
 
 
       <section class="price" id="price">
-        <div class="price__inner-wrapper"> 
+        <div class="price__inner-wrapper">
           <div class="price__slider clearfix">
-            
-            <div class="price__item price__item--first">
-              
-              <h2 class="price__name">Стандарт <span class="price__cost">3,99 USD</span></h2>
-              
-              <ul class="price__options">
-                <li class="price__option price__option--enabled">Розовый фильтр</li>
-                <li class="price__option price__option--disabled">Смайлики</li>
-                <li class="price__option price__option--disabled">Комментарии</li>
-              </ul>
-            
-            </div>
-            
-            <div class="price__item price__item--current">
-              
-              <h2 class="price__name  price__name--hit">Стандарт <span class="price__cost">3,99 USD</span></h2>
-              
-              <ul class="price__options">
-                <li class="price__option price__option--enabled">Розовый фильтр</li>
-                <li class="price__option price__option--enabled">Смайлики</li>
-                <li class="price__option price__option--disabled">Комментарии</li>
-              </ul>
-            
-            </div>
-            
-            <div class="price__item price__item--last">
-              
-              <h2 class="price__name">Стандарт <span class="price__cost">3,99 USD</span></h2>
-              
-              <ul class="price__options">
-                <li class="price__option price__option--enabled">Розовый фильтр</li>
-                <li class="price__option price__option--enabled">Смайлики</li>
-                <li class="price__option price__option--enabled">Комментарии</li>
-              </ul>
-            
-            </div>
-          
-          </div>  
+            <div class="price__slider-wrapper clearfix">
+              <div class="price__item">
+
+                <h2 class="price__name">Стандарт <span class="price__cost">3,99 USD</span></h2>
+
+                <ul class="price__options">
+                  <li class="price__option price__option--enabled">Розовый фильтр</li>
+                  <li class="price__option price__option--disabled">Смайлики</li>
+                  <li class="price__option price__option--disabled">Комментарии</li>
+                </ul>
+
+              </div>
+
+              <div class="price__item price__item--active">
+
+                <h2 class="price__name  price__name--hit">Стандарт <span class="price__cost">3,99 USD</span></h2>
+
+                <ul class="price__options">
+                  <li class="price__option price__option--enabled">Розовый фильтр</li>
+                  <li class="price__option price__option--enabled">Смайлики</li>
+                  <li class="price__option price__option--disabled">Комментарии</li>
+                </ul>
+
+              </div>
+
+              <div class="price__item">
+
+                <h2 class="price__name">Стандарт <span class="price__cost">3,99 USD</span></h2>
+
+                <ul class="price__options">
+                  <li class="price__option price__option--enabled">Розовый фильтр</li>
+                  <li class="price__option price__option--enabled">Смайлики</li>
+                  <li class="price__option price__option--enabled">Комментарии</li>
+                </ul>
+
+              </div>
+
+          </div>
 
           <div class="slider-control">
             <span class="slider-control__item"></span>
-            <span class="slider-control__item  slider-control__item--current"></span>
+            <span class="slider-control__item  slider-control__item--active"></span>
             <span class="slider-control__item"></span>
           </div>
 
-        </div>  
+        </div>
       </section>
 
-    </div>  
+    </div>
 
 
 
     <footer class="page-footer">
 
       <div class="page-footer__inner-wrapper">
-        
+
         <section class="contacts clearfix">
-          
-          <h2 class="contacts__header-h2">Остались вопросы? Свяжитесь с нами!</h2>            
-          
+
+          <h2 class="contacts__header-h2">Остались вопросы? Свяжитесь с нами!</h2>
+
           <ul class="contacts__list">
-          
+
             <li class="contacts__item">
               <p class="contacts__name"><strong>Звоните:</strong></p>
               <p class="contacts__detail">8 (800) 1000 900</p>
             </li>
-          
+
             <li class="contacts__item">
               <p class="contacts__name"><strong>Пишите:</strong></p>
               <p class="contacts__detail"><a class="contacts__email" href="mailto:hello@pinkapp.ru">hello@pinkapp.ru</a></p>
             </li>
-          
+
             <li class="contacts__item">
               <p class="contacts__name"><strong>Приезжайте в гости:</strong></p>
               <p class="contacts__detail">Санкт-Петербург,<br> Невский проспект, д. 20</p>
             </li>
-          
+
           </ul>
-        
+
         </section>
-        
-        <div class="page-footer__map" id="map">
+
+        <div class="page-footer__map map" id="map-canvas">
           <div class="page-footer__pin"></div>
-        </div>  
-      
+        </div>
+
       </div>
 
     </footer>
 
-  <!-- <script src="js/script.js"></script> -->
-
+<!--   <script src="js/script.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false">
+    </script> -->
   </body>
 
 </html>
