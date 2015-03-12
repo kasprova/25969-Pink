@@ -14,27 +14,20 @@
 
   &__slider-wrapper{
     margin: 0px auto;
+    padding: 0px;
     overflow: hidden;
+    white-space: nowrap;
+    transform: translateX(-252px);
   }
 
   &__item {
-    overflow: hidden;
-    display: block;
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
     width: 276px;
     margin: 0;
     text-transform: @text-transform;
   }
-
-  &__item::nth-child(1) {
-    transform: translateX(-(276px-20px));
-  }
-  &__item::nth-child(2) {
-    transform: translateX(24px);
-  }
-  &__item::nth-child(3) {
-    transform: translateX((276px+24px));
-  }
-
 
   &__name {
     position: relative;
@@ -77,6 +70,7 @@
     position: relative;
     margin: 0 -2px;
     padding: 20px;
+    font-size: @text-size;
     text-align: left;
     background-color: @bg-white;
     border: 2px solid #e5e5e5;
