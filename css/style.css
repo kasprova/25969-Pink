@@ -588,28 +588,23 @@ body {
   height: 280px;
   margin: 0 25%;
 }
-.review__slider {
+.review {
   overflow: hidden;
 }
 .review__slider-wrapper {
   margin: 0px auto;
+  padding: 0px;
+  white-space: nowrap;
+  letter-spacing: -2px;
 }
 .review__slide {
   display: inline-block;
-  font-size: 0;
-  width: 320px;
-  overflow: hidden;
   vertical-align: top;
-}
-.review__slide::nth-child(2) {
-  -webkit-transform: translateX(320px);
-      -ms-transform: translateX(320px);
-          transform: translateX(320px);
-}
-.review__slide::nth-child(3) {
-  -webkit-transform: translateX(640px);
-      -ms-transform: translateX(640px);
-          transform: translateX(640px);
+  width: 320px;
+  font-size: 0;
+  white-space: normal;
+  letter-spacing: normal;
+  margin: 0;
 }
 .review__author {
   color: #000000;
@@ -645,18 +640,17 @@ body {
 .price__slider-wrapper {
   margin: 0px auto;
   padding: 0px;
-  overflow: hidden;
   white-space: nowrap;
-  -webkit-transform: translateX(-252px);
-      -ms-transform: translateX(-252px);
-          transform: translateX(-252px);
+  -webkit-transform: translateX(-254px);
+      -ms-transform: translateX(-254px);
+          transform: translateX(-254px);
 }
 .price__item {
   display: inline-block;
   vertical-align: top;
   font-size: 0;
   width: 276px;
-  margin: 0;
+  margin: 0 -1px;
   text-transform: uppercase;
 }
 .price__name {
@@ -738,11 +732,11 @@ body {
   padding: 0;
 }
 .page-footer__map {
+  position: relative;
   background-image: url("../img/bg-map.png");
   background-position: 50% 100%;
   height: 212px;
   width: 100%;
-  position: relative;
 }
 .page-footer__pin {
   position: absolute;
@@ -774,7 +768,7 @@ body {
   padding: 0;
   padding-top: 15px;
   background-color: #ffffff;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 .contacts__item {
   list-style: none;

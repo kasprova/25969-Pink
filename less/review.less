@@ -1,29 +1,26 @@
 // review:
 
 .review {
+    overflow: hidden;
 
   &__slider{
-    overflow: hidden;
   }
 
   &__slider-wrapper {
     margin: 0px auto;
+    padding: 0px;
+    white-space: nowrap;
+    letter-spacing: -2px;
   }
 
   &__slide {
     display: inline-block;
-    font-size: 0;
-    width: 320px;
-    overflow: hidden;
     vertical-align: top;
-  }
-
-  &__slide::nth-child(2) {
-    transform: translateX(320px);
-  }
-
-  &__slide::nth-child(3) {
-    transform: translateX(320px*2);
+    width: 320px;
+    font-size: 0;
+    white-space: normal;
+    letter-spacing: normal;
+    margin: 0;
   }
 
   &__author {
