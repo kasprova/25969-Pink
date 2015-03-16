@@ -732,22 +732,10 @@ body {
   padding: 0;
 }
 .page-footer__map {
-  position: relative;
   background-image: url("../img/bg-map.png");
   background-position: 50% 100%;
   height: 212px;
   width: 100%;
-}
-.page-footer__pin {
-  position: absolute;
-  bottom: 70px;
-  left: 140px;
-  width: 36px;
-  height: 36px;
-  background-color: #d22856;
-  border: 10px solid #fff;
-  box-shadow: -2px 2px 2px 0 #aaaaaa;
-  border-radius: 50%;
 }
 .contacts {
   position: relative;

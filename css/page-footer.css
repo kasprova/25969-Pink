@@ -1,0 +1,12 @@
+.page-footer__inner-wrapper {
+  margin: 0 auto;
+  width: 320px;
+  padding: 0;
+}
+.page-footer__map {
+  /*     position: relative;
+background-image: url("@{patch}/bg-map.png"); */
+  background-position: 50% 100%;
+  height: 212px;
+  width: 100%;
+}
