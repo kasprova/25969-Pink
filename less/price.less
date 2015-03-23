@@ -1,5 +1,8 @@
 // price:
 
+/* mobile */
+@media (min-width: 320px) and (max-width: 700px) {
+
 .price {
   position: relative;
   overflow: hidden;
@@ -106,13 +109,134 @@
   position: absolute;
   top: 0;
   margin:0;
-  height: 32px;
-  width: 320px;
+  height: (32/320)*100vw;
+  width: 100vw;
   background-image: linear-gradient(
     -5deg,
-    @bg-light-grey 32px,
-    @bg-white 32px
+    @bg-light-grey (32/320)*100vw,
+    @bg-white (32/320)*100vw
+  );
+}
+}
+
+//------------------------- end of mobile ----------------//
+/* tablet */
+
+@media (min-width: 700px) and (max-width: 1200px) {
+
+.price {
+  position: relative;
+  overflow: hidden;
+  padding-top: 90px;
+  padding-bottom: 5px;
+  background-color: @bg-light-grey;
+  z-index: 10;
+
+  &__slider {
+    padding-bottom: 5px;
+  }
+
+  &__slider-wrapper{
+    margin: 0px auto;
+    padding: 0px;
+    white-space: nowrap;
+    transform: translateX(-254px);
+  }
+
+  &__item {
+    display: inline-block;
+    vertical-align: top;
+    font-size: 0;
+    width: 276px;
+    margin: 0 -1px;
+    text-transform: @text-transform;
+  }
+
+  &__name {
+    position: relative;
+    margin: 0;
+    padding: 20px 0;
+    color: @text-color-white;
+    background-color: @table-head-color;
+    font-size: @text-size-middle;
+    font-weight: @font-weight-bold;
+    line-height: @line-height + 6px;
+    text-align: @text-align;
+  }
+
+  &__name--hit::before {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    margin-left: -2px;
+    width: 74px;
+    height: 73px;
+    background: url("@{patch}/temp-ribbon.png") no-repeat 0 0;
+  }
+
+
+  &__cost {
+    display: block;
+    font-size: @text-size-big;
+    font-weight: @font-weight-light;
+    line-height: @line-height + 6px;
+  }
+
+  &__options {
+    margin: 0;
+    padding: 0;
+    list-style: @list-style;
+  }
+
+  &__option {
+    position: relative;
+    margin: 0 -2px;
+    padding: 20px;
+    font-size: @text-size;
+    text-align: left;
+    background-color: @bg-white;
+    border: 2px solid #e5e5e5;
+    border-top: 0;
+  }
+
+  &__option--enabled::after,
+  &__option--disabled::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 50%;
+    right: 0;
+    margin-right: 19px;
+  }
+
+  &__option--enabled::after {
+    width: 27px;
+    height: 20px;
+    margin-top: -11px;
+    background: url("@{patch}/sprite_icons.png") no-repeat 0 -4px;
+  }
+
+  &__option--disabled::after {
+    width: 24px;
+    height: 25px;
+    margin-top: -13px;
+    background: url("@{patch}/sprite_icons.png") no-repeat -30px -1px;
+  }
+}
+
+.price::before {
+  content:"";
+  position: absolute;
+  top: 0;
+  margin:0;
+  height: (32/320)*100vw;
+  width: 100vw;
+  background-image: linear-gradient(
+    -5deg,
+    @bg-light-grey (32/320)*100vw,
+    @bg-white (32/320)*100vw
   );
 }
 
-//------------------------- end of price ----------------//
+}

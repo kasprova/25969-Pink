@@ -1,12 +1,15 @@
 // promo:
 
+/* mobile */
+@media (min-width: 320px) and (max-width: 700px) {
+
 .promo {
   padding-bottom: 280px;
   background-color: @bg-light-grey;
 
   &__inner-wrapper {
     margin: 0 auto;
-    width: 320px;
+    width: 100vw;
   }
 
   &__header {
@@ -17,7 +20,7 @@
 
   &__header-h2 {
     color: @text-color-dark-blue;
-    font-size: @text-size-big;
+    font-size: @text-size-middle;
     font-weight: @font-weight-light;
     line-height: @line-height;
     margin: 0 auto;
@@ -71,14 +74,14 @@
   &__container::before {
     content:"";
     position: absolute;
-    top: -32px;
+    top: -(32/320)*100vw;
     margin: 0;
-    height: 32px;
-    width: 320px;
+    height: (32/320)*100vw;
+    width: 100vw;
     background-image: linear-gradient(
       -5deg,
-      @bg-light-grey 32px,
-      @bg-white 32px
+      @bg-light-grey (32/320)*100vw,
+      @bg-white (32/320)*100vw
     ); 
   } 
 
@@ -91,5 +94,104 @@
     margin: 0 25%;
   }  
 }
-
+}
 //------------------------- end of promo ----------------//
+
+/* tablet */
+
+@media (min-width: 700px) and (max-width: 1200px) {
+
+.promo {
+  background-color: @bg-light-grey;
+
+  &__inner-wrapper {
+    margin: 0 auto;
+    width: 100vw;
+  }
+
+  &__header {
+    padding-top: 45px;
+    padding-bottom: 32+50px;
+    background-color: @bg-white;
+
+  }
+
+  &__header-h2 {
+    color: @text-color-dark-blue;
+    font-size: @text-size-big--tab;
+    font-weight: @font-weight-light;
+    line-height: @line-height--tab;
+    text-align: @text-align;
+    margin: 0 auto;
+    padding-left: 45px;
+    padding-right: 45px;
+  }
+  &__header-h2:last-child{
+    padding-left: (170/700)*100vw;
+    padding-right: (170/700)*100vw;
+    padding-bottom: 45px;
+  }
+
+  &__container {
+    position: relative;
+    padding-top: 5px;
+  }
+
+  &__list {
+    padding:0;
+    margin:0;
+    margin-top: 0;
+    margin-left: 345px;
+    margin-right: 40px;
+  }
+
+  &__item {
+    list-style: @list-style;
+    margin: 0;
+  }
+
+  &__name {
+    color: @text-color-black;
+    font-size: @text-size-big;
+    font-weight: @font-weight-bold;
+    line-height: @line-height;
+    margin: 0;
+    margin-bottom: 15px;
+
+  }
+  &__detail {
+    color: @text-color-dark-blue;
+    font-size: @text-size;
+    font-weight: @font-weight-regular;
+    line-height: @line-height;
+    margin: 0;
+    padding-bottom: 40px;
+  }
+
+
+  &__container::before {
+    content:"";
+    position: absolute;
+    top: -(32/320)*100vw;
+    margin: 0;
+    height: (32/320)*100vw;
+    width: 100vw;
+    background-image: linear-gradient(
+      -5deg,
+      @bg-light-grey (32/320)*100vw,
+      @bg-white (32/320)*100vw
+    ); 
+  } 
+
+  &__container::after {
+    content:"";
+    position: absolute;
+    background: url("@{patch}/bg-promo--tab.png") no-repeat 0 0;
+    bottom:0;
+    left: (40/700)*100vw;
+    width: 268px;
+    height: 480px;
+  }  
+}
+
+}

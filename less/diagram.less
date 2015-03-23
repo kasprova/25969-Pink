@@ -1,0 +1,58 @@
+/* mobile */
+@media (min-width: 320px) and (max-width: 700px) {
+
+.diagram{display:none;}
+}
+//------------------------- end of mobile ----------------//
+/* tablet */
+
+@media (min-width: 700px) and (max-width: 1200px) {
+
+.diagram{
+  position: relative;
+  min-height: 342px;
+
+  &__inner-wrapper{
+    margin: 0 auto;
+    margin-top: 56px;
+    padding-bottom: 45px;
+  }
+  &__header-h2 {
+    font-size: @text-size-big+6px;
+    line-height: @line-height + 12px;
+    font-weight: @font-weight-bold;
+    padding-left: 350px;
+    padding-right: 160px;
+    padding-top: 45px;
+  }
+
+  &__detail {
+    padding-left: 345px;
+    padding-right: 40px;
+    font-size: @text-size;
+    line-height: @line-height;
+  }
+
+  &__link {
+    color: @text-color-pink;
+    padding-left: 345px;
+    font-size: @text-size;
+
+
+  }
+}
+
+
+
+.diagram:after{
+  content:"";
+  display: block;
+  position: absolute;
+  background: url("@{patch}/bg-diagram--tab.png") no-repeat 0 0;
+  width: 262px;
+  height: 302px;
+  top:0;
+  left:40px;
+}
+
+}

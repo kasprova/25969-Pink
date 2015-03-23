@@ -1,0 +1,26 @@
+// social-btns:
+
+/* tablet */
+@media (min-width: 700px) and (max-width: 1200px) {
+	.social-btns {
+	flex-grow: 1;	
+    float: left;
+    width: 180px;
+    height: 45px;
+    margin: 0 auto;
+
+	&__item {
+    display:inline-block;
+    margin-right: 12px;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid #e9ebec;
+    cursor: pointer;
+}
+	&__item:hover {
+    border: 3px solid @text-color-dark-blue;
+}
+
+}
+}
