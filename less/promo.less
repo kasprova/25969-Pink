@@ -1,15 +1,15 @@
 // promo:
 
 /* mobile */
-@media (min-width: 320px) and (max-width: 700px) {
 
 .promo {
   padding-bottom: 280px;
   background-color: @bg-light-grey;
+  margin: 0;
 
   &__inner-wrapper {
     margin: 0 auto;
-    width: 100vw;
+    width: 100%;
   }
 
   &__header {
@@ -19,20 +19,19 @@
   }
 
   &__header-h2 {
-    color: @text-color-dark-blue;
-    font-size: @text-size-middle;
-    font-weight: @font-weight-light;
-    line-height: @line-height;
     margin: 0 auto;
     padding-bottom: 35px;
     padding-left: 55px;
     padding-right: 55px;
+    color: @text-color-dark-blue;
+    font-size: @text-size-middle;
+    font-weight: @font-weight-light;
+    line-height: @line-height;
     text-align: @text-align;
   }
 
   &__container {
     position: relative;
-
     padding-top: 45px;
   }
 
@@ -43,41 +42,41 @@
   }
 
   &__item {
+    margin: 0;
     list-style: @list-style;
     text-align: @text-align;
-    margin: 0;
   }
 
   &__name {
+    margin: 0;
+    margin-bottom: 15px;
     color: @text-color-black;
     font-size: @text-size-middle;
     font-weight: @font-weight-bold;
     line-height: @line-height;
     text-align: @text-align;
-    margin: 0;
-    margin-bottom: 15px;
 
   }
   &__detail {
+    margin: 0;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 30px;
     color: @text-color-dark-blue;
     font-size: @text-size;
     font-weight: @font-weight-regular;
     line-height: @line-height;
     text-align: @text-align;
-    margin: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 30px;
   }
 
 
   &__container::before {
     content:"";
     position: absolute;
-    top: -(32/320)*100vw;
     margin: 0;
-    height: (32/320)*100vw;
     width: 100vw;
+    height: (32/320)*100vw;
+    top: -(32/320)*100vw;
     background-image: linear-gradient(
       -5deg,
       @bg-light-grey (32/320)*100vw,
@@ -94,7 +93,7 @@
     margin: 0 25%;
   }  
 }
-}
+
 //------------------------- end of promo ----------------//
 
 /* tablet */
@@ -103,28 +102,30 @@
 
 .promo {
   background-color: @bg-light-grey;
+  padding-bottom: 0;
+  margin: 0;
 
   &__inner-wrapper {
     margin: 0 auto;
-    width: 100vw;
+    width: 100%;
   }
 
   &__header {
     padding-top: 45px;
-    padding-bottom: 32+50px;
+    padding-bottom: 32px+50px;
     background-color: @bg-white;
 
   }
 
   &__header-h2 {
+    margin: 0 auto;
+    padding-left: 45px;
+    padding-right: 45px;
     color: @text-color-dark-blue;
     font-size: @text-size-big--tab;
     font-weight: @font-weight-light;
     line-height: @line-height--tab;
     text-align: @text-align;
-    margin: 0 auto;
-    padding-left: 45px;
-    padding-right: 45px;
   }
   &__header-h2:last-child{
     padding-left: (170/700)*100vw;
@@ -139,43 +140,43 @@
 
   &__list {
     padding:0;
-    margin:0;
+    margin-right:0;
     margin-top: 0;
     margin-left: 345px;
     margin-right: 40px;
   }
 
   &__item {
-    list-style: @list-style;
     margin: 0;
+    list-style: @list-style;
   }
 
   &__name {
+    margin: 0;
+    margin-bottom: 15px;
     color: @text-color-black;
     font-size: @text-size-big;
     font-weight: @font-weight-bold;
     line-height: @line-height;
-    margin: 0;
-    margin-bottom: 15px;
 
   }
   &__detail {
+    margin: 0;
+    padding-bottom: 40px;
     color: @text-color-dark-blue;
     font-size: @text-size;
     font-weight: @font-weight-regular;
     line-height: @line-height;
-    margin: 0;
-    padding-bottom: 40px;
   }
 
 
   &__container::before {
     content:"";
     position: absolute;
-    top: -(32/320)*100vw;
     margin: 0;
-    height: (32/320)*100vw;
     width: 100vw;
+    top: -(32/320)*100vw;
+    height: (32/320)*100vw;
     background-image: linear-gradient(
       -5deg,
       @bg-light-grey (32/320)*100vw,
@@ -187,11 +188,137 @@
     content:"";
     position: absolute;
     background: url("@{patch}/bg-promo--tab.png") no-repeat 0 0;
-    bottom:0;
-    left: (40/700)*100vw;
+    bottom: 0;
     width: 268px;
     height: 480px;
+    left: (40/700)*100vw;
   }  
 }
 
 }
+
+//------------------------- end of tablet ----------------//
+/* desktop > 1200*/
+
+@media (min-width: 1200px) and (max-width: 1440px){
+
+.promo {
+  padding-bottom: 1px;
+  margin: 0;
+  margin-bottom: 1px;
+  border-top: transparent;
+
+
+  &__inner-wrapper {
+    margin: 0 auto;
+  }
+
+  &__header {
+    padding-top: 65px;
+    padding-bottom: 32px+50px;
+    background-color: @bg-white;
+
+  }
+
+  &__header-h2 {
+    padding:0;
+    width: 960px;
+    padding-left: 90px;
+    padding-right: 90px;
+    color: @text-color-dark-blue;
+    font-size: @text-size-big--desk;
+    font-weight: @font-weight-light;
+    line-height: @line-height--desk;
+    text-align: @text-align;
+  }
+  &__header-h2:last-child{
+    padding-left: 250px;
+    padding-right: 250px;;
+    padding-bottom: 105px;
+  }
+
+  &__container {
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+    background-color: @bg-light-grey;
+    padding-top: 248px;
+
+  }
+
+  &__list {
+    padding: 0;
+    margin: 0;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 0;
+  }
+
+  &__item {
+    margin: 0;
+    margin-right: 20px;
+    padding: 0;
+    display: inline-block;
+    width: 300px;
+    list-style: @list-style;
+    
+    &:last-child{
+      margin-right:0;
+    }
+
+  }
+
+  &__name {
+    margin: 0;
+    margin-bottom: 50px;
+    color: @text-color-black;
+    font-size: @text-size-big+6px;
+    font-weight: @font-weight-bold;
+    line-height: @line-height+6px;
+
+  }
+  &__detail {
+    margin: 0;
+    padding-bottom: 65px;
+    color: @text-color-dark-blue;
+    font-size: @text-size-middle;
+    font-weight: @font-weight-regular;
+    line-height: @line-height+6px;
+  }
+
+
+  &__container::before {
+    content:"";
+    position: absolute;
+    margin: 0;
+    width: 100%;
+    width: 100vw;
+    top: -(90/1220)*100vw;
+    height: (90/1220)*100vw;
+    background-image: linear-gradient(
+      -4.2deg,
+      @bg-light-grey (90/1220)*100vw,
+      @bg-white (90/1220)*100vw
+    ); 
+  } 
+
+  &__container::after {
+    content:"";
+    display: block;
+    position: absolute;
+    background: 
+      url("@{patch}/iphone-screen-3-3@1x.png") no-repeat 654px 0,
+      url("@{patch}/iphone-screen-3-2@1x.png") no-repeat 334px 0,
+      url("@{patch}/iphone-screen-3-1@1x.png") no-repeat 14px 0;
+    bottom: 352px;
+    left: 0;
+    width: 960px;
+    height: 302px;
+    margin: 0;
+
+  }  
+}
+
+}
+
+//------------------------- end of desctop 1200 1440 ----------------//

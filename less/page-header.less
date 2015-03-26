@@ -3,7 +3,7 @@
 /* mobile */
 @media (min-width: 320px) and (max-width: 700px) {
 .page-header {
-  background-image: url("@{patch}/bg-header-iphone.png"), url("@{patch}/bg-header.jpg");
+  background-image: url("@{patch}/bg-header-iphone.png"), url("@{patch}/bg-header-1@1x.jpg");
   background-repeat: no-repeat, no-repeat;
   background-size: 100%, 100vw 460px;
   background-position: 0 173px, 0 0;
@@ -11,8 +11,8 @@
   position: relative;
 
   &__inner-wrapper {
-    width: auto;
-margin: 0 auto;
+    width: 320px;
+    margin: 0 auto;
   }
 
   &__row {
@@ -57,7 +57,7 @@ margin: 0 auto;
     left: 0;
     width: 75px;
     height: 23px;
-  } 
+  }
 
 
   &__trigger {
@@ -74,7 +74,7 @@ margin: 0 auto;
   width: 23px;
   height: 22px;
   background-image: url("@{patch}/btn-close.png");
-} */ 
+} */
   }
 
   &__text {
@@ -98,12 +98,13 @@ margin: 0 auto;
 @media (min-width: 700px) and (max-width: 1200px) {
 
 .page-header {
-  background-image: url("@{patch}/bg-header-iphone--tab.png"),url("@{patch}/bg-header--tab.jpg");
+  background-image: url("@{patch}/bg-header-iphone--tab.png"),url("@{patch}/bg-header-2@1x.jpg");
   background-repeat:  no-repeat,  no-repeat;
-  background-size: 100vw,  100vw ;
+  background-size: 100vw 100vh,  100vw 100vh;
   background-position: bottom 0px left 0px, 0 0;
   width: 100vw;
   height: 729px;
+
 
   &__inner-wrapper {
     width: 100%;
@@ -154,7 +155,7 @@ margin: 0 auto;
     left: 70px;
     width: 75px;
     height: 23px;
-  } 
+  }
   &__trigger {
     display:block;
     width: 50px;
@@ -186,4 +187,105 @@ margin: 0 auto;
 }
 
 
+}
+//------------------------- end of tablet ----------------//
+/* desktop > 1200*/
+@media (min-width: 1200px) and (max-width: 1440px){
+.page-header {
+  position: relative;
+  background: url("@{patch}/bg-header-2@1x.jpg") no-repeat 0 0;
+  background-size: cover;
+  height: 854px;
+
+  &:before {
+    content:"";
+    position: absolute;
+    display: block;
+    background-image: url("@{patch}/iphone-hand-3@1x.png");
+    background-repeat: no-repeat;
+    right: -17px;
+    bottom: 8px;
+    background-size: 1050px 645px;
+
+  }
+
+  &__inner-wrapper {
+    width: 960px;
+    margin: 0 auto;
+  }
+
+  &__row {
+    position: fixed;
+    padding: 40px 40px 42px 40px;
+    width: 100%;
+    min-height: 110px;
+    background-color: rgba(0,0,0,0.3);
+    z-index: 100;
+
+/* &--opened {
+  display: none;
+  background-color: @text-color-dark-blue;
+} */
+  }
+
+  &__container {
+    position:relative;
+  }
+
+  &__logo-link {
+    margin: 0;
+    cursor: pointer;
+    text-decoration: @text-decoration;
+    color: @text-color-white;
+    font-size: 32px;
+    line-height: 24px;
+    text-transform: @text-transform;
+  }
+
+  &__logo-icon {
+    position: absolute;
+    display: inline-block;
+    top: -17px;
+    left: 0;
+    width: 60px;
+    height: 40px;
+  }
+
+  &__logo-text {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 70px;
+    width: 75px;
+    height: 23px;
+  }
+  &__trigger {
+    display:block;
+    width: 50px;
+    height: 24px;
+    position: absolute;
+    top: 0;
+    right: 0;
+    background: url("@{patch}/btn-open.png");
+
+    /*  &--opened {
+     display: none;
+     width: 23px;
+     height: 22px;
+     background: url("@{patch}/btn-close.png");
+        } */
+  }
+
+  &__text {
+    font-size: @text-size-big--tab;
+    color: @text-color-white;
+    font-weight: @font-weight-light;
+    text-align: @text-align;
+    line-height: @line-height--tab;
+    padding-top: 202px;
+    margin: 0 auto 0 90px;
+    display: block;
+    width: 210px;
+  }
+}
 }

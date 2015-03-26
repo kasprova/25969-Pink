@@ -5,6 +5,8 @@
 
 .review {
     overflow: hidden;
+    padding-top: 1px;
+    padding-bottom: 1px;
 
   &__slider{
   }
@@ -18,34 +20,34 @@
 
   &__slide {
     display: inline-block;
-    vertical-align: top;
+    margin: 0;
     width: 100vw;
+    vertical-align: top;
     font-size: 0;
     white-space: normal;
     letter-spacing: normal;
-    margin: 0;
   }
 
   &__author {
+    margin: 0 auto;
+    padding-top: 45px;
     color: @text-color-black;
     text-align: @text-align;
     font-size: @text-size-middle;
     font-weight: @font-weight-bold;
     line-height: @line-height + 6px;
-    margin: 0 auto;
-    padding-top: 45px;
   }
 
   &__blockquote {
+    margin: 0 auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-top: 20px;
     color: @text-color-dark-blue;
     text-align: @text-align;
     font-size: @text-size;
     font-weight: @font-weight-regular;
     line-height: @line-height + 6px;
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-top: 20px;
   }
 
 }
@@ -58,6 +60,8 @@
 
 .review {
     overflow: hidden;
+    padding-top: 1px;
+    padding-bottom: 1px;
 
   &__slider{
   }
@@ -68,19 +72,20 @@
     white-space: nowrap;
     letter-spacing: -2px;
   }
+
   &__slide {
     display: inline-block;
+    margin: 0;
     vertical-align: top;
     width: 100vw;
     font-size: 0;
     white-space: normal;
     letter-spacing: normal;
-    margin: 0;
   }
+
   &__container {
     display: table;
     border-spacing: 35px;
-
   }
 
   &__author {
@@ -101,14 +106,116 @@
   }
 
   &__author-info {
-    font-size: @text-size;
-    text-align: @text-align;
     margin: 0 auto;
     margin:-20px;
     padding-bottom: 20px;
+    font-size: @text-size;
+    text-align: @text-align;
+  }
+}
 }
 
-}
+//------------------------- end of tablet ----------------//
+/* desktop >1200*/
+
+@media (min-width: 1200px){
+
+.review {
+    overflow: hidden;
+    position: relative;
+    padding-top: 148px;
+    padding-bottom: 1px;
+
+  &__slider{
+  }
+
+  &__slider-wrapper {
+    margin: 0 auto;
+    padding: 0;
+    white-space: nowrap;
+    letter-spacing: -2px;
+
+    &:after {
+      position: absolute;
+      display: block;
+      content: "";
+      background: url("@{patch}/deco-quotes.png") no-repeat 0 0;
+      top: 74px;
+      right: 45%;
+      width: 79px;
+      height: 64px;
+    }
+  }
+
+  &__slide {
+    display: inline-block;
+    width: 100vw;
+    margin: 0;
+    margin-bottom: 35px;
+    vertical-align: top;
+    font-size: 0;
+    white-space: normal;
+    letter-spacing: normal;
+
+    &:before{
+      position: absolute;
+      display: block;
+      content: "";
+      background: url("@{patch}/sprite-arrows.png") no-repeat 0 0;
+      top: 215px;
+      left: 10%;
+      width: 23px;
+      height: 41px;
+    }
+
+    &:after{
+      position: absolute;
+      display: block;
+      content: "";
+      background: url("@{patch}/sprite-arrows.png") no-repeat -24px 0;
+      top: 215px;
+      left: 90%;
+      width: 23px;
+      height: 41px;
+    }
+  }
+
+  &__container {
+    display: table;
+    width: 780px;
+    border-spacing: 35px;
+    margin: 0 auto;
+    
+  }
+
+  &__author {
+    display: table-footer-group;
+    color: @text-color-black;
+    font-size: @text-size-big;
+    font-weight: @font-weight-bold;
+    text-align: @text-align;
+  }
 
 
+  &__blockquote {
+    display: table-header-group;
+    color: @text-color-dark-blue;
+    font-size: @text-size-middle;
+    font-weight: @font-weight-regular;
+    line-height: @line-height + 6px;
+    text-align: @text-align;
+
+    &-quotes {
+      color: @text-color-white;
+    }
+  }
+
+  &__author-info {
+    margin: 0 auto;
+    margin:-20px;
+    padding-bottom: 20px;
+    font-size: @text-size-middle;
+    text-align: @text-align;
+  }
 }
+}  

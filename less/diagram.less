@@ -1,8 +1,12 @@
 /* mobile */
 @media (min-width: 320px) and (max-width: 700px) {
 
-.diagram{display:none;}
+.diagram {
+  display:none;
 }
+
+}
+
 //------------------------- end of mobile ----------------//
 /* tablet */
 
@@ -17,13 +21,14 @@
     margin-top: 56px;
     padding-bottom: 45px;
   }
+
   &__header-h2 {
-    font-size: @text-size-big+6px;
-    line-height: @line-height + 12px;
-    font-weight: @font-weight-bold;
     padding-left: 350px;
     padding-right: 160px;
     padding-top: 45px;
+    font-size: @text-size-big+6px;
+    line-height: @line-height + 12px;
+    font-weight: @font-weight-bold;
   }
 
   &__detail {
@@ -34,15 +39,11 @@
   }
 
   &__link {
-    color: @text-color-pink;
     padding-left: 345px;
+    color: @text-color-pink;
     font-size: @text-size;
-
-
   }
 }
-
-
 
 .diagram:after{
   content:"";
@@ -51,8 +52,73 @@
   background: url("@{patch}/bg-diagram--tab.png") no-repeat 0 0;
   width: 262px;
   height: 302px;
-  top:0;
-  left:40px;
+  top: 0;
+  left: 40px;
 }
 
 }
+
+//------------------------- end of tablet ----------------//
+/* desktop > 1200*/
+
+@media (min-width: 1200px) {
+
+.diagram{
+  position: relative;
+  background-color: @bg-light-grey;
+/*   min-height: 346px+66px; */
+
+  &__inner-wrapper{
+    margin: 0 auto;
+    margin-top: 56px;
+    padding-bottom: 45px;
+    width: 960px;
+    outline: 3px solid red;
+  }
+
+  &__header-h2 {
+    padding-left: 375px;
+    padding-top: 100px;
+    font-size: @text-size-big+6px;
+    line-height: @line-height + 16px;
+    font-weight: @font-weight-bold;
+  }
+
+  &__detail {
+    padding-left: 375px;
+    padding-right: 55px;
+    margin-bottom: 30px;
+    font-size: @text-size-middle;
+    line-height: @line-height+6px;
+  }
+
+  &__link {
+    padding-left: 375px;
+    color: @text-color-pink;
+    font-size: @text-size-middle;
+
+    &:hover {
+      color: @text-color-dark-blue;
+    }
+
+    &:active {
+      color: @text-color-dark-blue;
+      opacity: .1;
+    }
+  }
+}
+
+.diagram:after{
+  content:"";
+  display: block;
+  position: absolute;
+  background: url("@{patch}/bg-diagram--desk.png") no-repeat 0 0;
+  width: 301px;
+  height: 346px;
+  top: 0;
+  left: 10%;
+}
+
+}
+
+//------------------------- end of desctop >1200 ----------------//
