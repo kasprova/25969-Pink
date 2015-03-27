@@ -28,11 +28,19 @@
     border: 3px solid @border-color;
     border-radius: 30px;
     cursor: pointer;
+    &:hover{
+      background-color: @bg-white;
+      color: @text-color-pink;
+    }
+    &:active{
+      background-color: @bg-white;
+      color:  @text-color-pink--active;
+    }
   }
 
    &__icons {
     height: 57px;
-    width: 205px; 
+    width: 205px;
     display:block;
     margin: 0 auto;
     background-image: url("@{patch}/sprite.png");
@@ -47,6 +55,7 @@
     padding-bottom: 35px;
     margin-bottom: 0;
     text-align: @text-align;
+
   }
 }
 }
@@ -56,7 +65,7 @@
 /* tablet */
 
 @media (min-width: 700px) and (max-width: 1200px) {
- 
+
  .download {
   position: absolute;
   top: 377px;
@@ -82,28 +91,37 @@
     border: 3px solid @border-color;
     border-radius: 30px;
     cursor: pointer;
+
+    &:hover{
+      background-color: @bg-white;
+      color: @text-color-pink;
+    }
+    &:active{
+      background-color: @bg-white;
+      color:  @text-color-pink--active;
+    }
   }
 
    &__icons {
     height: 57px;
-    width: 205px; 
+    width: 205px;
     margin-left: 80px;
     background-image: url("@{patch}/sprite.png");
     margin-bottom: 32px;
   }
 
   &__text {
-    font-size: @text-size-middle--tab; 
+    font-size: @text-size-middle--tab;
     font-weight: @font-weight-light;
     line-height: @line-height;
     padding-top: 0;
-    padding-right: 330px; 
+    padding-right: 330px;
     padding-left: 30px;
     padding-bottom: 35px;
     margin: 0;
     text-align: @text-align;
   }
-} 
+}
 
 }
 
@@ -115,8 +133,8 @@
 @media (min-width: 1200px) and (max-width: 1440px){
 
  .download {
-  position: absolute;
-  top: 377px;
+  position: relative;
+  margin-top: -405px;
   color: @text-color-white;
 
   &__inner-wrapper {
@@ -126,41 +144,51 @@
 
   &__btn {
     display:block;
-    width: 280px;
+    width: 300px;
     margin: 0;
-    margin-left: 40px;
-    margin-bottom: 44px;
-    padding: 15px 35px;
+    margin-left: 15px;
+    margin-bottom: 65px;
+    padding: 12px 28px;
     color: @text-color-white;
     font-weight: @font-weight-bold;
     text-align: @text-align;
     text-decoration: @text-decoration;
-    font-size: @text-size-middle;
+    font-size: @text-size-middle+3px;
     border: 3px solid @border-color;
     border-radius: 30px;
     cursor: pointer;
+
+    &:hover{
+      background-color: @bg-white;
+      color: @text-color-pink;
+    }
+    &:active{
+      background-color: @bg-white;
+      color:  @text-color-pink--active;
+    }
   }
 
    &__icons {
     height: 57px;
-    width: 205px; 
-    margin-left: 80px;
+    width: 205px;
+    margin-left: 55px;
     background-image: url("@{patch}/sprite.png");
-    margin-bottom: 32px;
+    margin-bottom: 55px;
   }
 
   &__text {
-    font-size: @text-size-middle--tab; 
+    display: block;
+    width: 320px;
+    font-size: @text-size-middle;
     font-weight: @font-weight-light;
     line-height: @line-height;
     padding-top: 0;
-    padding-right: 330px; 
-    padding-left: 30px;
-    padding-bottom: 35px;
+    padding-left: 0;
     margin: 0;
+    margin-left:5px;
     text-align: @text-align;
   }
-} 
+}
 
 }
 

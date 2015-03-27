@@ -191,6 +191,7 @@
 //------------------------- end of tablet ----------------//
 /* desktop > 1200*/
 @media (min-width: 1200px) and (max-width: 1440px){
+
 .page-header {
   position: relative;
   background: url("@{patch}/bg-header-2@1x.jpg") no-repeat 0 0;
@@ -203,9 +204,21 @@
     display: block;
     background-image: url("@{patch}/iphone-hand-3@1x.png");
     background-repeat: no-repeat;
-    right: -17px;
-    bottom: 8px;
-    background-size: 1050px 645px;
+    left: 145px;
+    bottom: 0;
+    width: 1050px;
+    height: 645px;
+  }
+
+  &:after{
+    content:"";
+    position: absolute;
+    top:0;
+    left: 0;
+    display: block;
+    height: 110px;
+    width: 100%;
+    background-color: rgba(0,0,0,0.3);
 
   }
 
@@ -215,11 +228,8 @@
   }
 
   &__row {
-    position: fixed;
-    padding: 40px 40px 42px 40px;
+    padding: 42px 10px;
     width: 100%;
-    min-height: 110px;
-    background-color: rgba(0,0,0,0.3);
     z-index: 100;
 
 /* &--opened {
@@ -277,15 +287,16 @@
   }
 
   &__text {
-    font-size: @text-size-big--tab;
+    font-size: @text-size-big--desk;
     color: @text-color-white;
     font-weight: @font-weight-light;
     text-align: @text-align;
-    line-height: @line-height--tab;
-    padding-top: 202px;
-    margin: 0 auto 0 90px;
+    line-height: @line-height--desk;
+    padding-top: 220px;
+    margin: 0;
+    margin-left: 40px;
     display: block;
-    width: 210px;
+    width: 240px;
   }
 }
 }

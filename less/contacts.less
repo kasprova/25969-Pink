@@ -62,9 +62,9 @@
     color: @text-color-pink;
 
     &:active {
-      text-decoration: underline;
-      opacity: .1;
-    }      
+      opacity: .3;
+      text-decoration: @text-decoration;
+    }
   }
 }
 .contacts::before {
@@ -152,11 +152,11 @@
   &__email {
     text-decoration: @text-decoration;
     color: @text-color-pink;
-    
+
     &:active {
-      text-decoration: underline;
-      opacity: .1;
-    }      
+      opacity: .3;
+      text-decoration: @text-decoration;
+    }
   }
 }
 
@@ -224,7 +224,7 @@
     &:nth-child(2) {
       order: 3;
     }
-    
+
     &:nth-child(3) {
       order: 2;
     }
@@ -252,15 +252,15 @@
   &__email {
     text-decoration: @text-decoration;
     color: @text-color-pink;
-    
+
     &:hover {
       text-decoration: underline;
       color: @text-color-dark-blue;
     }
     &:active {
-      text-decoration: underline;
-      opacity: .1;
-    }    
+      opacity: .3;
+      text-decoration: @text-decoration;
+    }
   }
 }
 

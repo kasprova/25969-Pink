@@ -548,20 +548,28 @@ body {
     display: block;
     background-image: url("../img/iphone-hand-3@1x.png");
     background-repeat: no-repeat;
-    right: -17px;
-    bottom: 8px;
-    background-size: 1050px 645px;
+    left: 145px;
+    bottom: 0;
+    width: 1050px;
+    height: 645px;
+  }
+  .page-header:after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: block;
+    height: 110px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
   }
   .page-header__inner-wrapper {
     width: 960px;
     margin: 0 auto;
   }
   .page-header__row {
-    position: fixed;
-    padding: 40px 40px 42px 40px;
+    padding: 42px 10px;
     width: 100%;
-    min-height: 110px;
-    background-color: rgba(0, 0, 0, 0.3);
     z-index: 100
     /* &--opened {
   display: none;
@@ -612,15 +620,16 @@ body {
         } */
   }
   .page-header__text {
-    font-size: 40px;
+    font-size: 50px;
     color: #ffffff;
     font-weight: 300;
     text-align: center;
-    line-height: 47px;
-    padding-top: 202px;
-    margin: 0 auto 0 90px;
+    line-height: 62px;
+    padding-top: 220px;
+    margin: 0;
+    margin-left: 40px;
     display: block;
-    width: 210px;
+    width: 240px;
   }
 }
 /* mobile */
@@ -745,6 +754,14 @@ body {
     border-radius: 30px;
     cursor: pointer;
   }
+  .download__btn:hover {
+    background-color: #ffffff;
+    color: #d22856;
+  }
+  .download__btn:active {
+    background-color: #ffffff;
+    color: #f1becc;
+  }
   .download__icons {
     height: 57px;
     width: 205px;
@@ -790,6 +807,14 @@ body {
     border-radius: 30px;
     cursor: pointer;
   }
+  .download__btn:hover {
+    background-color: #ffffff;
+    color: #d22856;
+  }
+  .download__btn:active {
+    background-color: #ffffff;
+    color: #f1becc;
+  }
   .download__icons {
     height: 57px;
     width: 205px;
@@ -812,8 +837,8 @@ body {
 /* desktop > 1200*/
 @media (min-width: 1200px) and (max-width: 1440px) {
   .download {
-    position: absolute;
-    top: 377px;
+    position: relative;
+    margin-top: -405px;
     color: #ffffff;
   }
   .download__inner-wrapper {
@@ -822,36 +847,45 @@ body {
   }
   .download__btn {
     display: block;
-    width: 280px;
+    width: 300px;
     margin: 0;
-    margin-left: 40px;
-    margin-bottom: 44px;
-    padding: 15px 35px;
+    margin-left: 15px;
+    margin-bottom: 65px;
+    padding: 12px 28px;
     color: #ffffff;
     font-weight: 700;
     text-align: center;
     text-decoration: none;
-    font-size: 18px;
+    font-size: 21px;
     border: 3px solid #ffffff;
     border-radius: 30px;
     cursor: pointer;
   }
+  .download__btn:hover {
+    background-color: #ffffff;
+    color: #d22856;
+  }
+  .download__btn:active {
+    background-color: #ffffff;
+    color: #f1becc;
+  }
   .download__icons {
     height: 57px;
     width: 205px;
-    margin-left: 80px;
+    margin-left: 55px;
     background-image: url("../img/sprite.png");
-    margin-bottom: 32px;
+    margin-bottom: 55px;
   }
   .download__text {
+    display: block;
+    width: 320px;
     font-size: 18px;
     font-weight: 300;
     line-height: 24px;
     padding-top: 0;
-    padding-right: 330px;
-    padding-left: 30px;
-    padding-bottom: 35px;
+    padding-left: 0;
     margin: 0;
+    margin-left: 5px;
     text-align: center;
   }
 }
@@ -1020,6 +1054,7 @@ body {
   .promo {
     padding-bottom: 1px;
     margin: 0;
+    margin-top: 122px;
     margin-bottom: 1px;
     border-top: transparent;
   }
@@ -1891,8 +1926,8 @@ body {
   color: #d22856;
 }
 .contacts__email:active {
-  text-decoration: underline;
-  opacity: .1;
+  opacity: .3;
+  text-decoration: none;
 }
 .contacts::before {
   position: absolute;
@@ -1977,8 +2012,8 @@ body {
     color: #d22856;
   }
   .contacts__email:active {
-    text-decoration: underline;
-    opacity: .1;
+    opacity: .3;
+    text-decoration: none;
   }
   .contacts::before {
     position: absolute;
@@ -2074,8 +2109,8 @@ body {
     color: #283645;
   }
   .contacts__email:active {
-    text-decoration: underline;
-    opacity: .1;
+    opacity: .3;
+    text-decoration: none;
   }
   .contacts::before {
     position: absolute;
