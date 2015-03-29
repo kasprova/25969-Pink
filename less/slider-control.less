@@ -22,6 +22,18 @@
       height: 12px;
       background-color: @bg-white;
       border: 3px solid #273544;
+
+      &:hover {
+        background-color: @bg-white;
+      }
+    }
+
+    &:hover {
+      background-color: #858c95;
+    }
+
+    &:active {
+      background-color: #e9ebec;
     }
   }
 }
@@ -54,8 +66,21 @@
         height: 12px;
         background-color: @bg-white;
         border: 3px solid #273544;
+
+        &:hover {
+          background-color: @bg-white;
+        }
       }
+
+
+    &:hover {
+      background-color: #858c95;
     }
+
+    &:active {
+      background-color: #e9ebec;
+    }
+
 
     &__panel--disabled{
       display: none;
@@ -98,12 +123,12 @@
     }
   }
 }
-
+}
 
 //------------------------- end of tablet ----------------//
 /* desktop */
 
-@media (min-width: 1200px) and (max-width: 1440px) {  
+@media (min-width: 1200px) and (max-width: 1440px) {
 
 .slider-control {
   display: none;

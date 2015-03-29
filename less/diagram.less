@@ -1,10 +1,9 @@
 /* mobile */
 @media (min-width: 320px) and (max-width: 700px) {
 
-.diagram {
-  display:none;
-}
-
+  .diagram {
+    display:none;
+  }
 }
 
 //------------------------- end of mobile ----------------//
@@ -12,50 +11,62 @@
 
 @media (min-width: 700px) and (max-width: 1200px) {
 
-.diagram{
-  position: relative;
-  min-height: 342px;
-
-  &__inner-wrapper{
-    margin: 0 auto;
+  .diagram{
+    margin:0;
+    padding: 0;
+    padding-top: 1px;
     margin-top: 56px;
     padding-bottom: 45px;
+    min-height: 342px;
+
+    &__inner-wrapper{
+      position: relative;
+      margin: 0 auto;
+      width: 640px;
+
+      &:before{
+        content:"";
+        display: block;
+        position: absolute;
+        background: url("@{patch}/bg-diagram--tab.png") no-repeat 0 0;
+        width: 262px;
+        height: 302px;
+        top: 0;
+        left: 10px;
+      }
+    }
+
+    &__header-h2 {
+      width: 180px;
+      margin-left: 320px;
+      padding-top: 45px;
+      font-size: @text-size-big+6px;
+      line-height: @line-height + 12px;
+      font-weight: @font-weight-bold;
+    }
+
+    &__detail {
+      width: 320px;
+      margin-left: 320px;
+      font-size: @text-size;
+      line-height: @line-height;
+    }
+
+    &__link {
+      margin-left: 320px;
+      color: @text-color-pink;
+      font-size: @text-size;
+
+      &:hover {
+        color: @text-color-dark-blue;
+      }
+
+      &:active {
+        color: @text-color-dark-blue;
+        opacity: .1;
+      }
+    }
   }
-
-  &__header-h2 {
-    padding-left: 350px;
-    padding-right: 160px;
-    padding-top: 45px;
-    font-size: @text-size-big+6px;
-    line-height: @line-height + 12px;
-    font-weight: @font-weight-bold;
-  }
-
-  &__detail {
-    padding-left: 345px;
-    padding-right: 40px;
-    font-size: @text-size;
-    line-height: @line-height;
-  }
-
-  &__link {
-    padding-left: 345px;
-    color: @text-color-pink;
-    font-size: @text-size;
-  }
-}
-
-.diagram:after{
-  content:"";
-  display: block;
-  position: absolute;
-  background: url("@{patch}/bg-diagram--tab.png") no-repeat 0 0;
-  width: 262px;
-  height: 302px;
-  top: 0;
-  left: 40px;
-}
-
 }
 
 //------------------------- end of tablet ----------------//
@@ -63,62 +74,63 @@
 
 @media (min-width: 1200px) {
 
-.diagram{
-  position: relative;
-  background-color: @bg-light-grey;
-/*   min-height: 346px+66px; */
+  .diagram{
+    background-color: @bg-light-grey;
+    margin:0;
+    padding: 0;
+    padding-top: 1px;
+    padding-bottom: 66px;
+  /*   min-height: 346px+66px; */
 
-  &__inner-wrapper{
-    margin: 0 auto;
-    margin-top: 56px;
-    padding-bottom: 45px;
-    width: 960px;
-    outline: 3px solid red;
-  }
+    &__inner-wrapper{
+      position: relative;
+      margin: 0 auto;
+      padding-bottom: 45px;
+      width: 960px;
 
-  &__header-h2 {
-    padding-left: 375px;
-    padding-top: 100px;
-    font-size: @text-size-big+6px;
-    line-height: @line-height + 16px;
-    font-weight: @font-weight-bold;
-  }
-
-  &__detail {
-    padding-left: 375px;
-    padding-right: 55px;
-    margin-bottom: 30px;
-    font-size: @text-size-middle;
-    line-height: @line-height+6px;
-  }
-
-  &__link {
-    padding-left: 375px;
-    color: @text-color-pink;
-    font-size: @text-size-middle;
-
-    &:hover {
-      color: @text-color-dark-blue;
+      &:before{
+        content:"";
+        display: block;
+        position: absolute;
+        background: url("@{patch}/bg-diagram--desk.png") no-repeat 0 0;
+        width: 301px;
+        height: 346px;
+        top: 0;
+        left: 0;
+      }
     }
 
-    &:active {
-      color: @text-color-dark-blue;
-      opacity: .1;
+    &__header-h2 {
+      margin-left: 375px;
+      padding-top: 100px;
+      font-size: @text-size-big+6px;
+      line-height: @line-height + 16px;
+      font-weight: @font-weight-bold;
+    }
+
+    &__detail {
+      width: 530x;
+      margin-left: 375px;
+      margin-bottom: 30px;
+      font-size: @text-size-middle;
+      line-height: @line-height+6px;
+    }
+
+    &__link {
+      margin-left: 375px;
+      color: @text-color-pink;
+      font-size: @text-size-middle;
+
+      &:hover {
+        color: @text-color-dark-blue;
+      }
+
+      &:active {
+        color: @text-color-dark-blue;
+        opacity: .1;
+      }
     }
   }
-}
-
-.diagram:after{
-  content:"";
-  display: block;
-  position: absolute;
-  background: url("@{patch}/bg-diagram--desk.png") no-repeat 0 0;
-  width: 301px;
-  height: 346px;
-  top: 0;
-  left: 10%;
-}
-
 }
 
 //------------------------- end of desctop >1200 ----------------//

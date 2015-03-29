@@ -16,19 +16,26 @@
   }
 
   &__slider-wrapper{
-    margin: 0px auto;
+    margin: 0 -254/320*100vw; /* 276-(320-276)/2=254 */
     text-align: center;
     white-space: nowrap;
-    transform: translateX(-254px);
+/*     transform: translateX(-254px); */
+  /*   width: 825px; */
+
   }
 
   &__item {
     display: inline-block;
     vertical-align: top;
     font-size: 0;
-    width: 276px;
+/* width: 276px; */
+    width: (276/320)*100vw;
     margin: 0 -1px;
     text-transform: @text-transform;
+
+/*     &:first-child, &:last-child{
+  width: 276px;
+} */
   }
 
   &__name {

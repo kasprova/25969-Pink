@@ -19,9 +19,13 @@
     border: 3px solid #e9ebec;
     cursor: pointer;
     text-align: @text-align;
+
     &:hover {
     border: 3px solid @text-color-dark-blue;
   }
+    &:active {
+      border: 3px solid #e9ebec;
+    }
   }
 }
 
@@ -30,7 +34,7 @@
 .icon-play {
   font-size: @text-size +2px;
   color: @text-color-pink;
-  
+
   &:active {
     opacity: .3;
   }
@@ -58,9 +62,13 @@
     border: 3px solid #e9ebec;
     cursor: pointer;
     text-align: @text-align;
-    
+
     &:hover {
-     border: 3px solid @text-color-dark-blue;
+      border: 3px solid @text-color-dark-blue;
+    }
+
+    &:active {
+      border: 3px solid #e9ebec;
     }
   }
 
@@ -72,7 +80,7 @@
 .icon-play {
   font-size: @text-size-middle+2px;
   color: @text-color-pink;
-    
+
   &:active {
     opacity: .3;
   }
