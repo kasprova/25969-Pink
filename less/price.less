@@ -250,12 +250,12 @@
     border: 2px solid #e5e5e5;
     border-top: 0;
   }
-/*   &__option-wrap:nth-of-type(2) {
+&__option-wrap:nth-of-type(2) {
   padding-right: 53px;
 }
 &__option-wrap:nth-child(3) {
   padding-right: 24px;
-} */
+}
 
 
 }
@@ -392,21 +392,22 @@
     padding-top: 20px;
     padding-bottom: 20px;
     padding-left: 20px;
-    padding-right: 44px;
+    padding-right: 45px;
     font-size: @text-size-middle;
     text-align: left;
     background-color: @bg-white;
     border: 2px solid #e5e5e5;
     border-top: 0;
-  }
-/*   &__option-wrap:nth-of-type(2) {
-  padding-right: 53px;
-}
-&__option-wrap:nth-child(3) {
-  padding-right: 24px;
-} */
 
-}
+    &:nth-of-type(2) {
+      padding-right: 53px;
+    }
+    &:nth-of-type(3) {
+      padding-right: 24px;
+      }
+    }
+
+    }
 
 .price::before {
   content:"";
