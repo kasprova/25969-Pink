@@ -1,13 +1,10 @@
 // download:
-@media (min-width: 320px) and (max-width: 700px) {
 
 .download {
 
   background-color: @bg-dark-blue;
   color: @text-color-white;
-  width: 100vw;
   padding-top: 27px;
-
 
   &__inner-wrapper {
     margin: 0 auto;
@@ -28,10 +25,12 @@
     border: 3px solid @border-color;
     border-radius: 30px;
     cursor: pointer;
+
     &:hover{
       background-color: @bg-white;
       color: @text-color-pink;
     }
+
     &:active{
       background-color: @bg-white;
       color:  @text-color-pink--active;
@@ -41,24 +40,28 @@
    &__icons {
     height: 57px;
     width: 205px;
-    display:block;
     margin: 0 auto;
-    background-image: url("@{patch}/sprite.png");
+    background-image: url("@{patch}/sprite-os.png");
     margin-bottom: 20px;
+
+    @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx){
+      background-image: url("@{patch}/sprite-os@2x.png")
+    }
   }
 
   &__text {
+    padding: 0 7%;
+    padding-bottom: 35px;
+    margin-bottom: 0;
     font-size: @text-size;
     font-weight: @font-weight-light;
     line-height: @line-height;
-    padding: 0 37px;
-    padding-bottom: 35px;
-    margin-bottom: 0;
     text-align: @text-align;
 
   }
 }
-}
+
 
 //------------------------- end of mobile ----------------//
 
@@ -66,130 +69,83 @@
 
 @media (min-width: 700px) and (max-width: 1200px) {
 
- .download {
-  position: relative;
-  margin-top: -353px;
-  color: @text-color-white;
-
-  &__inner-wrapper {
-    width: 640px;
-    margin: 0 auto;
-  }
-
-  &__btn {
-    display:block;
-    width: 280px;
-    margin: 0;
-    margin-left: 10px;
-    margin-bottom: 44px;
-    padding: 15px 35px;
+  .download {
+    position: relative;
+    margin-top: -353px;
     color: @text-color-white;
-    font-weight: @font-weight-bold;
-    text-align: @text-align;
-    text-decoration: @text-decoration;
-    font-size: @text-size-middle;
-    border: 3px solid @border-color;
-    border-radius: 30px;
-    cursor: pointer;
-
-    &:hover{
-      background-color: @bg-white;
-      color: @text-color-pink;
-    }
-    &:active{
-      background-color: @bg-white;
-      color:  @text-color-pink--active;
-    }
-  }
-
-   &__icons {
-    height: 57px;
-    width: 205px;
-    margin-left: 55px;
-    background-image: url("@{patch}/sprite.png");
-    margin-bottom: 32px;
-  }
-
-  &__text {
-    display: block;
-    width: 310px;
-    font-size: @text-size-middle;
-    font-weight: @font-weight-light;
-    line-height: @line-height;
+    background-color: transparent;
     padding-top: 0;
-    margin-left: 5px;
-    margin: 0;
-    text-align: @text-align;
+
+    &__inner-wrapper {
+      width: 90%;
+    }
+
+    &__container{
+      width: 50%;
+      height: auto;
+      display: block;
+      margin-left: (5/700)*100%;
+    }
+
+    &__btn {
+      margin-bottom: 44px;
+    }
+
+     &__icons {
+      margin-bottom: 32px;
+    }
+
+    &__text {
+      padding: 0;
+      margin: 0;
+      margin-left: (4/700)*100%;
+      display: block;
+      width: 51%;
+      font-size: @text-size-middle;
+    }
   }
 }
-
-}
-
-
 
 //------------------------- end of tablet ----------------//
+
 /* desktop > 1200*/
 
 @media (min-width: 1200px){
 
- .download {
-  position: relative;
-  margin-top: -405px;
-  color: @text-color-white;
-
-  &__inner-wrapper {
-    width: 960px;
-    margin: 0 auto;
-  }
-
-  &__btn {
-    display:block;
-    width: 300px;
-    margin: 0;
-    margin-left: 15px;
-    margin-bottom: 65px;
-    padding: 12px 28px;
-    color: @text-color-white;
-    font-weight: @font-weight-bold;
-    text-align: @text-align;
-    text-decoration: @text-decoration;
-    font-size: @text-size-middle+3px;
-    border: 3px solid @border-color;
-    border-radius: 30px;
-    cursor: pointer;
-
-    &:hover{
-      background-color: @bg-white;
-      color: @text-color-pink;
-    }
-    &:active{
-      background-color: @bg-white;
-      color:  @text-color-pink--active;
-    }
-  }
-
-   &__icons {
-    height: 57px;
-    width: 205px;
-    margin-left: 55px;
-    background-image: url("@{patch}/sprite.png");
-    margin-bottom: 55px;
-  }
-
-  &__text {
-    display: block;
-    width: 320px;
-    font-size: @text-size-middle;
-    font-weight: @font-weight-light;
-    line-height: @line-height;
+  .download {
+    position: relative;
+    margin-top: -405px;
     padding-top: 0;
-    padding-left: 0;
-    margin: 0;
-    margin-left:5px;
-    text-align: @text-align;
+    background-color: transparent;
+
+
+    &__inner-wrapper {
+      width: 960px;
+    }
+
+    &__btn {
+      width: 300px;
+      margin: 0;
+      margin-left: 15px;
+      margin-bottom: 65px;
+      padding: 12px 28px;
+      font-size: @text-size-middle+3px;
+    }
+
+     &__icons {
+      margin-bottom: 55px;
+      margin-left: 55px;
+    }
+
+    &__text {
+      display: block;
+      width: 320px;
+      font-size: @text-size-middle;
+      padding:0;
+      margin: 0;
+      margin-left:5px;
+    }
   }
 }
 
-}
-
-//------------------------- end of desctop 1200 1440 ----------------//
+//------------------------- end of desctop > 1200 ----------------//

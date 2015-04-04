@@ -1,9 +1,7 @@
 /* mobile */
-@media (min-width: 320px) and (max-width: 700px) {
 
-  .diagram {
-    display:none;
-  }
+.diagram {
+  display:none;
 }
 
 //------------------------- end of mobile ----------------//
@@ -12,6 +10,7 @@
 @media (min-width: 700px) and (max-width: 1200px) {
 
   .diagram{
+    display: block;
     margin:0;
     padding: 0;
     padding-top: 1px;
@@ -22,23 +21,28 @@
     &__inner-wrapper{
       position: relative;
       margin: 0 auto;
-      width: 640px;
+      width: 90%;
 
       &:before{
         content:"";
         display: block;
         position: absolute;
-        background: url("@{patch}/bg-diagram--tab.png") no-repeat 0 0;
+        background: url("@{patch}/bg-diagram-2@1x.png") no-repeat 0 0;
         width: 262px;
         height: 302px;
         top: 0;
-        left: 10px;
+        right: (360/640)*100%;
+
+        @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx){
+          background-image: url("@{patch}/bg-diagram-2@2x.png")
+        }
       }
     }
 
     &__header-h2 {
-      width: 180px;
-      margin-left: 320px;
+      margin-left: 50%;
+      margin-right: %;
       padding-top: 45px;
       font-size: @text-size-big+6px;
       line-height: @line-height + 12px;
@@ -46,14 +50,15 @@
     }
 
     &__detail {
-      width: 320px;
-      margin-left: 320px;
+      margin-left: 50%;
+      margin-right: 5%;
       font-size: @text-size;
       line-height: @line-height;
     }
 
     &__link {
-      margin-left: 320px;
+      margin-left: 50%;
+      margin-right: 5%;
       color: @text-color-pink;
       font-size: @text-size;
 
@@ -75,12 +80,12 @@
 @media (min-width: 1200px) {
 
   .diagram{
+    display: block;
     background-color: @bg-light-grey;
     margin:0;
     padding: 0;
     padding-top: 1px;
     padding-bottom: 66px;
-  /*   min-height: 346px+66px; */
 
     &__inner-wrapper{
       position: relative;
@@ -92,11 +97,16 @@
         content:"";
         display: block;
         position: absolute;
-        background: url("@{patch}/bg-diagram--desk.png") no-repeat 0 0;
+        background: url("@{patch}/bg-diagram-3@1x.png") no-repeat 0 0;
         width: 301px;
         height: 346px;
         top: 0;
         left: 0;
+
+        @media (min-resolution: 144dpi),
+        (min-resolution: 1.5dppx){
+          background-image: url("@{patch}/bg-diagram-3@2x.png")
+        }
       }
     }
 

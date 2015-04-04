@@ -1,35 +1,33 @@
 // review:
 
-/* mobile */
-@media (min-width: 320px) and (max-width: 700px) {
+/* mobile*/
 
 .review {
-    overflow: hidden;
-    padding-top: 1px;
-    padding-bottom: 1px;
 
   &__slider{
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 60px;
   }
 
-  &__slider-wrapper {
-    margin: 0px auto;
-    padding: 0px;
-    white-space: nowrap;
-    letter-spacing: -2px;
+  &__slider input[type=radio] {
+    display: none;
+  }
+
+  &__slider-inner {
+    overflow: hidden;
+    width: 90%;
+    margin: 0 auto;
   }
 
   &__slide {
-    display: inline-block;
-    margin: 0;
-    width: 100vw;
-    vertical-align: top;
-    font-size: 0;
-    white-space: normal;
-    letter-spacing: normal;
+    float: left;
+    display: block;
+    width: 33.333333%;
   }
 
   &__author {
-    margin: 0 auto;
+    margin: 0;
     padding-top: 45px;
     color: @text-color-black;
     text-align: @text-align;
@@ -39,9 +37,7 @@
   }
 
   &__blockquote {
-    margin: 0 auto;
-    padding-left: 20px;
-    padding-right: 20px;
+    margin: 0;
     padding-top: 20px;
     color: @text-color-dark-blue;
     text-align: @text-align;
@@ -50,69 +46,43 @@
     line-height: @line-height + 6px;
   }
 
+  &__author-info{
+    display: none;
+  }
 }
-}
+
 //------------------------- end of mobile ----------------//
 
 /* tablet */
 
 @media (min-width: 700px) and (max-width: 1200px) {
 
-.review {
-    overflow: hidden;
-    padding-top: 1px;
-    padding-bottom: 1px;
+  .review {
 
-  &__slider{
-  }
+    &__container {
+      display: table;
+      border-spacing: 35px;
+    }
 
-  &__slider-wrapper {
-    margin: 0px auto;
-    padding: 0px;
-    white-space: nowrap;
-    letter-spacing: -2px;
-  }
+    &__author {
+      display: table-footer-group;
+      font-size: @text-size + 6px;
+    }
 
-  &__slide {
-    display: inline-block;
-    margin: 0;
-    vertical-align: top;
-    width: 100vw;
-    font-size: 0;
-    white-space: normal;
-    letter-spacing: normal;
-  }
+    &__blockquote {
+      display: table-header-group;
+      font-size: @text-size-middle;
+    }
 
-  &__container {
-    display: table;
-    border-spacing: 35px;
+    &__author-info {
+      display: block;
+      margin: 0 auto;
+      margin-top:-20px;
+      padding-bottom: 20px;
+      font-size: @text-size;
+      text-align: @text-align;
+    }
   }
-
-  &__author {
-    display: table-footer-group;
-    color: @text-color-black;
-    text-align: @text-align;
-    font-size: @text-size + 6px;
-    font-weight: @font-weight-bold;
-  }
-
-  &__blockquote {
-    display: table-header-group;
-    color: @text-color-dark-blue;
-    text-align: @text-align;
-    font-size: @text-size-middle;
-    font-weight: @font-weight-regular;
-    line-height: @line-height + 6px;
-  }
-
-  &__author-info {
-    margin: 0 auto;
-    margin:-20px;
-    padding-bottom: 20px;
-    font-size: @text-size;
-    text-align: @text-align;
-  }
-}
 }
 
 //------------------------- end of tablet ----------------//
@@ -120,102 +90,62 @@
 
 @media (min-width: 1200px){
 
-.review {
-    overflow: hidden;
-    position: relative;
-    padding-top: 148px;
-    padding-bottom: 1px;
+  .review {
 
-  &__slider{
-  }
+    &__slider{
+      position: relative;
+      padding-top: 50px;
+      margin-bottom: 10px;
 
-  &__slider-wrapper {
-    margin: 0 auto;
-    padding: 0;
-    white-space: nowrap;
-    letter-spacing: -2px;
+      &:after {
+        position: absolute;
+        display: block;
+        content: "";
+        background: url("@{patch}/deco-quotes.png") no-repeat 0 0;
+        background-image: url("@{patch}/quotes.svg"), none;
+        top: 74px;
+        right: 47%;
+        width: 79px;
+        height: 64px;
+      }
+    }
 
-    &:after {
-      position: absolute;
+    &__slide {
+      float: left;
       display: block;
-      content: "";
-      background: url("@{patch}/deco-quotes.png") no-repeat 0 0;
-      top: 74px;
-      right: 45%;
-      width: 79px;
-      height: 64px;
+      width: 33.333333%;
+      margin-bottom: 35px;
+      margin-top: 100px;
+    }  
+
+    &__container {
+      display: table;
+      width: 780px;
+      border-spacing: 35px;
+      margin: 0 auto;
     }
-  }
 
-  &__slide {
-    display: inline-block;
-    width: 100vw;
-    margin: 0;
-    margin-bottom: 35px;
-    vertical-align: top;
-    font-size: 0;
-    white-space: normal;
-    letter-spacing: normal;
+    &__author {
+      display: table-footer-group;
+      font-size: @text-size-big;
+    }
 
-    &:before{
-      position: absolute;
+    &__blockquote {
+      display: table-header-group;
+      font-size: @text-size-middle;
+
+      &-quotes {
+        color: @text-color-white;
+      }
+    }
+
+    &__author-info {
       display: block;
-      content: "";
-      background: url("@{patch}/sprite-arrows.png") no-repeat 0 0;
-      top: 215px;
-      left: 10%;
-      width: 23px;
-      height: 41px;
+      margin: 0 auto;
+      margin-top:-20px;
+      font-size: @text-size-middle;
+      text-align: @text-align;
     }
-
-    &:after{
-      position: absolute;
-      display: block;
-      content: "";
-      background: url("@{patch}/sprite-arrows.png") no-repeat -24px 0;
-      top: 215px;
-      left: 90%;
-      width: 23px;
-      height: 41px;
-    }
-  }
-
-  &__container {
-    display: table;
-    width: 780px;
-    border-spacing: 35px;
-    margin: 0 auto;
-
-  }
-
-  &__author {
-    display: table-footer-group;
-    color: @text-color-black;
-    font-size: @text-size-big;
-    font-weight: @font-weight-bold;
-    text-align: @text-align;
-  }
-
-
-  &__blockquote {
-    display: table-header-group;
-    color: @text-color-dark-blue;
-    font-size: @text-size-middle;
-    font-weight: @font-weight-regular;
-    line-height: @line-height + 6px;
-    text-align: @text-align;
-
-    &-quotes {
-      color: @text-color-white;
-    }
-  }
-
-  &__author-info {
-    margin: 0 auto;
-    margin:-20px;
-    padding-bottom: 20px;
-    font-size: @text-size-middle;
-    text-align: @text-align;
   }
 }
-}
+//------------------------- end of desktop ----------------//
