@@ -44,7 +44,7 @@
   &__name {
     position: relative;
     display: block;
-    margin: 0 -2px;
+    margin: 0 -1px;
     padding: 20px 0;
     color: @text-color-white;
     background-color: @table-head-color;
@@ -52,9 +52,14 @@
     font-weight: @font-weight-bold;
     line-height: @line-height + 6px;
     text-align: @text-align;
-    border: 2px solid #e5e5e5;
+    border: 1px solid #e5e5e5;
 
     &:last-of-type{
+      border-right: none;
+      margin-right: -1px;
+    }
+
+    &:first-of-type{
       border-right: none;
     }
   }

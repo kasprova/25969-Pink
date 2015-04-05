@@ -17,13 +17,14 @@
     &:before{
       position: absolute;
       content:"";
-      top:0;
+      top: 0;
       left: 0;
       display: block;
       height: 66px;
       width: 100%;
       background-color: rgba(0,0,0,0.3);
     }
+
     &:after {
       content:"";
       position: relative;
@@ -45,65 +46,70 @@
     height: 100%;
     margin: 0 auto;
     position: relative;
-
   }
 
   &__row {
     padding: 22px 20px 21px;
     margin: 0;
 
-/* uncomment to show top row of navigation*/
-
-&--opened {
-  display: block;
-  background-color: @text-color-dark-blue;
-}
+    &--opened {
+      display: block;
+      background-color: @text-color-dark-blue;
+    }
   }
 
-    &__logo-link {
-      float: left;
-      display: block;
-      background-image: url("@{patch}/sprite-logo-header--tab.png");
-      background-position: -71px -17px;
-      background-repeat: no-repeat;
-      width: 74px;
-      height: 23px;
-      cursor: pointer;
+  &__logo-link {
+    float: left;
+    display: block;
+    background-image: url("@{patch}/sprite-logo-header--tab.png");
+    background-position: -71px -17px;
+    background-repeat: no-repeat;
+    width: 74px;
+    height: 23px;
+    cursor: pointer;
 
-      &:hover {
-        background-position: -71px -17px;
-      }
-      &:active {
-        background-position: -71px -129px-17px;
-      }
+    &:hover {
+      background-position: -71px -17px;
     }
+
+    &:active {
+      background-position: -71px -129px-17px;
+    }
+  }
 
 
   &__trigger {
-      float: right;
+    float: right;
+    display: block;
+    width: 50px;
+    height: 24px;
+    background-image: url("@{patch}/sprite-open-btn.png");
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    cursor: pointer;
+
+    &:hover{
+      background-position: 0 -50px;
+    }
+
+    &:active {
+      background-position: 0 -99px;
+    }
+
+    &--opened {
       display: block;
-      width: 50px;
-      height: 24px;
-      background-image: url("@{patch}/sprite-open-btn.png");
-      background-position: 0 0;
-      background-repeat: no-repeat;
-      cursor: pointer;
+      width: 23px;
+      height: 23px;
+      background-image: url("@{patch}/sprite-close-btn.png");
 
       &:hover{
-        background-position: 0 -50px;
+        background-position: 0 -49px;
       }
 
       &:active {
-        background-position: 0 -99px;
+        background-position: 0 -100px;
       }
-
-/* uncomment to change open to close in navigation*/
-/* &--opened {
-  display: display;
-  width: 23px;
-  height: 22px;
-  background-image: url("@{patch}/btn-close.png");
-} */
+    }
   }
 
   &__text {
@@ -148,20 +154,15 @@
           background-image: url("@{patch}/iphone-hand-2@2x.png")
         }
       }
-    
+
     &__inner-wrapper {
-      width: 90%;
+      width: 100%;
 
     }
 
     &__row {
-      padding: 26px 10px 42px;
+      padding: 26px 40px 42px;
       margin: 0;
-
-  /* &--opened {
-    display: block;
-    background-color: @text-color-dark-blue;
-  } */
     }
 
     &__logo-link {
@@ -214,20 +215,22 @@
       height: 110px;
     }
 
+    &:after {
+      background-image: url("@{patch}/iphone-hand-3@1x.png");
+      left: -10px;
+      width: 1050px;
+      height: 645px;
+      margin: -645px auto 0;
+
+      @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx){
+        background-image: url("@{patch}/iphone-hand-3@2x.png");
+      }
+    }
+
     &__inner-wrapper {
       width: 960px;
 
-      &:after {
-        background-image: url("@{patch}/iphone-hand-3@1x.png");
-        left: -10px;
-        width: 1050px;
-        height: 645px;
-
-        @media (min-resolution: 144dpi),
-        (min-resolution: 1.5dppx){
-          background-image: url("@{patch}/iphone-hand-3@2x.png");
-        }
-      }
     }
 
     &__row {

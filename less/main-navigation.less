@@ -2,7 +2,7 @@
 /* mobile */
 
 .main-nav {
-  display: block; /* uncomment to show navigation*/
+  display: none;
   position: absolute;
   margin-left: -20px;
   width: 100%;
@@ -11,14 +11,14 @@
   border-bottom: 1px solid #000;
   z-index:100;
 
+  &--opened{
+    display: block;
+  }
+
   &__list {
     margin: 0;
     padding: 0;
     list-style: @list-style;
-  }
-
-  &__item {
-    font-weight: @font-weight-bold;
   }
 
   &__link {
@@ -27,6 +27,7 @@
     padding: 20px 0;
     text-align: center;
     box-shadow: inset 0px 2px 0px 0px #485461;
+    font-weight: @font-weight-bold;
     color: @text-color-white;
     text-decoration: @text-decoration;
     text-transform: uppercase;
@@ -37,10 +38,8 @@
     }
 
     &:active{
-      color: @text-color-pink;
-      opacity: .3;
+      color: @text-color-pink--active;
     }
-
   }
 }
 
@@ -51,8 +50,9 @@
 @media (min-width: 700px) and (max-width: 1200px) {
 
   .main-nav {
-    width: 100vw;
-    top: 110px;
+    width: 100%;
+    top: 108px;
+    margin-left: -40px;
 
     &__link {
       padding: 22px 0;
@@ -62,41 +62,55 @@
 
 //------------------------- end of tablet ----------------//
 /* desktop > 1200*/
+
 @media (min-width: 1200px) {
 
   .main-nav {
   float: right;
-  width: 640px;
-    margin-right: -20px;
+  position: static;
+  display: block;
+  width: 800px;
+  margin: 0;
+  margin-right: -10px;
+  background-color: transparent;
+  border: none;
+  padding: 0;
 
     &__list {
       margin: 0;
-      padding: 0;
+      padding-right: 0;
       list-style: @list-style;
     }
 
     &__item {
-      display: inline-block;
-      vertical-align: top;
+      float: right;
+      margin: 0;
+      padding: 0;
+      margin-left: 30px;
     }
 
     &__link {
       display: block;
+      text-align: right;
       margin-top: 7px;
       margin-right:-0.2em;
       padding:7px 14px;
-      margin-left:30px;
       font-weight: @font-weight-regular;
       font-size: @text-size-middle;
       line-height: @line-height;
       text-decoration: @text-decoration;
       color: @text-color-white;
+      box-shadow: none;
+      border-color: transparent;
+      text-transform: none;
 
       &:hover{
       box-shadow: 0 17px 0 -15px white;
+      color: @text-color-white;
       }
 
       &:active{
+      color: @text-color-white;
       opacity: .3;
       }
     }
