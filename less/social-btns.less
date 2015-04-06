@@ -1,5 +1,16 @@
 // social-btns:
 
+@font-face {
+  font-family: "fontello";
+  src: url("../font/fontello.eot?95483143");
+  src: url("../font/fontello.eot?95483143#iefix") format("embedded-opentype"),
+       url("../font/fontello.woff?95483143") format("woff"),
+       url("../font/fontello.ttf?95483143") format("truetype"),
+       url("../font/fontello.svg?95483143#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+
 /* tablet */
 
 @media (min-width: 700px) and (max-width: 1200px){
@@ -35,14 +46,30 @@
   .icon-play {
     font-size: @text-size+2px;
     color: @text-color-pink;
-    width: 45px;
-    line-height: 45px;
-    border-radius: 50%;
 
     &:active {
       opacity: .3;
     }
   }
+
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  border-radius: 50%;
+}
+
+.icon-play:before { content: "\e800"; } /* "" */
+.icon-facebook:before { content: "\e801"; } /* "" */
+.icon-twitter:before { content: "\e802"; } /* "" */
 }
 
 
@@ -78,14 +105,26 @@
     }
   }
 
+[class^="icon-"]:before, [class*=" icon-"]:before {
+  font-family: "fontello";
+  font-style: normal;
+  font-weight: normal;
+  speak: none;
+  display: inline-block;
+  text-decoration: inherit;
+  width: 50px;
+  line-height: 50px;
+  text-align: center;
+  font-variant: normal;
+  text-transform: none;
+  border-radius: 50%;
+}
+
   .icon-twitter,
   .icon-facebook,
   .icon-play {
     font-size: @text-size-middle;
     color: @text-color-pink;
-    width: 50px;
-    line-height: 50px;
-    border-radius: 50%;
 
     &:active {
       opacity: .3;

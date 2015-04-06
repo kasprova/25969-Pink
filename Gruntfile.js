@@ -1,47 +1,40 @@
 module.exports = function(grunt) {
 
-  grunt.initConfig({
-    pkg: grunt.file.readJSON('package.json'),
+  require("load-grunt-tasks")(grunt);
 
-    // Lint Spaces in code
+  grunt.initConfig({
+    pkg: grunt.file.readJSON("package.json"),
+
     lintspaces: {
       all: {
         src: [
-          '*.html'
+          "*.html"
         ],
-        options: {
+      options: {
           newline: true,
           newlineMaximum: 2,
           trailingspaces: true,
           indentationGuess: true,
-          editorconfig: '.editorconfig',
+          editorconfig: ".editorconfig",
           ignores: [
-            'html-comments',
-            'js-comments'
+            "html-comments",
+            "js-comments"
           ],
           showTypes: true,
           showCodes: true
         }
       }
-    }
-  });
+    },
 
-  grunt.loadNpmTasks('grunt-lintspaces');
-
-  grunt.registerTask('lint', ['lintspaces']);
-};
-module.exports = function(grunt) {
-
-  require("load-grunt-tasks")(grunt);
-  grunt.initConfig({
     clean: {
-      build: ["build"]
-    }
+      build:["build"]
+    },
+
     copy: {
-      build: {
-        files: [{
+      build:{
+        files:[{
           expand: true,
-          cwd: "source",
+          cwd: "src",
           src: [
             "img/**",
             "js/**",
@@ -50,46 +43,58 @@ module.exports = function(grunt) {
           dest: "build"
         }]
       }
-    }
+    },
+
+    csscomb: {
+      style: {
+        expand: true,
+        src: ["scss/**/*.scss"]
+      }
+    },
+
     less: {
       style: {
         files: {
           "css/style.css": ["less/style.less"]
         }
       }
-    }
+    },
+
+      options:{
+        sourcemap: "none"
+      }
+
+    },
+
     autoprefixer: {
-      options: {
-        browsers: ["last 2 version", "ie 10"]
+      options:{
+        browsers: ["last 2 versions", "ie 10"]
       },
       style: {
-        src: "css/style.css"
+        src: "build/css/style.css"
       }
-    }
+    },
+
     cmq: {
       style: {
         files: {
-          "css/style.css": ["css/style.css"]
+          "build/css/style.css" : ["build/css/style.css"]
         }
       }
-    }
+    },
+
     cssmin: {
       style: {
-        options: {
-          keepSpecialComments: 0,
+        options:{
+          keepSpecialComments: "none",
           report: "gzip"
         },
         files: {
-          "css/style.min.css": ["css/style.css"]
+          "build/css/style.min.css" : ["build/css/style.css"]
         }
       }
-    }
-    csscomb: {
-      style: {
-        expand: true,
-        src: ["less/**/*.less"]
-      }
-    }
+    },
+
     imagemin: {
       images: {
         options: {
@@ -100,32 +105,38 @@ module.exports = function(grunt) {
           src: ["img/**/*.{png,jpg,gif,svg}"]
         }]
       }
-    }
-    htmlmin: {
+    },
+
+    svgmin: {
       options: {
-        removeComments: true,
-        collapseWhitespace: true,
-        collapseBooleanAttributes: true,
-        caseSensitive: true,
-        keepClosingSlash: false
+          plugins: [
+          { removeViewBox: false },
+          { removeUselessStrokeAndFill: false }
+          ]
       },
-      html: {
-        files: {
-          "index.min.html": "index.html"
-        }
+      dist: {
+          files: [{
+              expand: true, cwd: "build/img/", src: ["*.svg"], dest: "build/img/"
+          }]
+
       }
     }
+  });
 
- grunt.registerTask("build", [
- "clean",
- "copy",
- "less",
- "autoprefixer",
- "cmq",
- "cssmin",
- "csscomb",
- "imagemin",
- "htmlmin"
- ]);
+
+  grunt.registerTask("lint", ["lintspaces"]);
+  grunt.registerTask("svg-sprite", ["grunticon"]);
+
+  grunt.registerTask("default", [
+    "clean",
+    "copy",
+    "csscomb",
+    "less",
+    "autoprefixer",
+    "cmq",
+    "cssmin",
+    "imagemin",
+    "svgmin"
+  ]);
 
 };

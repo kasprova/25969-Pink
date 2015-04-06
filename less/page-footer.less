@@ -1,0 +1,228 @@
+// page-footer:
+
+/* mobile */
+
+.page-footer {
+	display:none;
+}
+
+
+//------------------------- end of mobile ----------------//
+
+/* tablet */
+
+@media (min-width: 700px) and (max-width: 1200px) {
+
+.page-footer {
+  display: block;
+  padding-top: 35px;
+  padding-bottom: 35px;
+
+  &__inner-wrapper{
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 30px 0 30px ;
+  }
+
+  &__logo-link {
+    flex-grow: 1;
+    min-width: 220px;
+    height: 40px;
+    margin: 0;
+    cursor: pointer;
+    background: url("@{patch}/sprite-logo-footer-2@1x.png") no-repeat 0 0;
+
+    @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx){
+      background: url("@{patch}/sprite-logo-footer-2@2x.png") no-repeat 0 0;
+    }
+
+    &:hover{
+      background-position: 0 -84.52px;
+
+      @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx){
+        background: url("@{patch}/sprite-logo-footer-2@2x.png") no-repeat 0 -168px;
+      }
+    }
+
+    &:active{
+      background-position: 0 -159px;
+
+      @media (min-resolution: 144dpi),
+      (min-resolution: 1.5dppx){
+        background: url("@{patch}/sprite-logo-footer-2@2x.png") no-repeat 0 -168px;
+      }
+
+    }
+  }
+
+  &__design {
+    flex-grow: 1;
+    min-width: 220px;
+    font-size: @text-size;
+    text-align: right;
+  }
+
+  &__designer-link {
+    background: url("@{patch}/icon-glukhanko.png") no-repeat 0 0;
+    background-image: url("@{patch}/glukhanko--dark-blue.svg"), none;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 27px;
+    height: 30px;
+    margin: 10px 10px -10px 10px;
+
+    &:hover {
+      background: url("@{patch}/icon-glukhanko--hvr.png") no-repeat 0 0;
+      background-image: url("@{patch}/glukhanko--pink.svg"), none;
+      background-repeat: no-repeat;
+    }
+
+    &:active {
+      background: url("@{patch}/icon-glukhanko--active.png") no-repeat 0 0;
+      background-image: url("@{patch}/glukhanko--light-grey.svg"), none;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__client-link {
+    background: url("@{patch}/icon-htmlacademy.png") no-repeat 0 0;
+    background-image: url("@{patch}/htmlacademy--dark-blue.svg"), none;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 27px;
+    height: 33px;
+    margin: 10px 10px -12px 10px;
+
+    &:hover {
+      background: url("@{patch}/icon-htmlacademy--hvr.png") no-repeat 0 0;
+      background-image: url("@{patch}/htmlacademy--pink.svg"), none;
+      background-repeat: no-repeat;
+    }
+
+    &:active {
+      background: url("@{patch}/icon-htmlacademy--active.png") no-repeat 0 0;
+      background-image: url("@{patch}/htmlacademy--light-grey.svg"), none;
+      background-repeat: no-repeat;
+    }
+  }
+}
+}
+//------------------------- end of tablet ----------------//
+
+/* desktop > 1200px */
+
+@media (min-width: 1200px) {
+
+.page-footer {
+  display: block;
+  position: relative;
+  padding-top: 70px;
+  padding-bottom: 70px;
+  font-size: @text-size-middle;
+
+  &__inner-wrapper{
+    margin: 0 auto;
+    width: 960px;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    margin: 0 auto;
+    max-width: 960px;
+  }
+
+  &__logo-link {
+    flex-grow: 0;
+    height: 54px;
+    width: 320px;
+    margin: 0;
+    cursor: pointer;
+    background-image: url("@{patch}/Pink-logo-footer-3@1x.png");
+    background-repeat: no-repeat;
+    background-position: bottom 13px left 10px;
+
+    @media (min-resolution: 144dpi),
+    (min-resolution: 1.5dppx){
+      background-image: url("@{patch}/Pink-logo-footer-3@2x.png")
+    }
+  }
+
+  &__logo-icon {
+    position: absolute;
+    display: inline-block;
+    top: -17px;
+    left: 0;
+    width: 60px;
+    height: 40px;
+  }
+
+  &__logo-text {
+    position: absolute;
+    display: inline-block;
+    top: 0;
+    left: 70px;
+    width: 75px;
+    height: 23px;
+  }
+
+  &__design {
+    flex-grow: 0;
+    width: 320px;
+    text-align: right;
+  }
+
+  &__designer-link {
+    background: url("@{patch}/icon-glukhanko.png") no-repeat 0 0;
+    background: url("@{patch}/glukhanko--dark-blue.svg"), none;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 27px;
+    height: 30px;
+    margin: 10px 10px -10px 10px;
+
+    &:hover {
+      background: url("@{patch}/icon-glukhanko--hvr.png") no-repeat 0 0;
+      background: url("@{patch}/glukhanko--pink.svg"), none;
+      background-repeat: no-repeat;
+    }
+
+    &:active {
+      background: url("@{patch}/icon-glukhanko--active.png") no-repeat 0 0;
+      background: url("@{patch}/glukhanko--light-grey.svg"), none;
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__client-link {
+    background: url("@{patch}/icon-htmlacademy.png") no-repeat 0 0;
+    background: url("@{patch}/htmlacademy--dark-blue.svg"), none;
+    background-repeat: no-repeat;
+    display: inline-block;
+    width: 27px;
+    height: 33px;
+    margin: 10px 0 -12px 10px;
+
+    &:hover {
+      background: url("@{patch}/icon-htmlacademy--hvr.png") no-repeat 0 0;
+      background: url("@{patch}/htmlacademy--pink.svg"), none;
+      background-repeat: no-repeat;
+    }
+
+    &:active {
+      background: url("@{patch}/icon-htmlacademy--active.png") no-repeat 0 0;
+      background: url("@{patch}/htmlacademy--light-grey.svg"), none;
+      background-repeat: no-repeat;
+    }
+  }
+}
+}
+
+//------------------------- end of desktop ----------------//

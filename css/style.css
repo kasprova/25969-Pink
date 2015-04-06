@@ -2020,6 +2020,13 @@ body {
     background-image: url("../img/Pink-logo-footer-3@2x.png");
   }
 }
+@font-face {
+  font-family: "fontello";
+  src: url("../font/fontello.eot?95483143");
+  src: url("../font/fontello.eot?95483143#iefix") format("embedded-opentype"), url("../font/fontello.woff?95483143") format("woff"), url("../font/fontello.ttf?95483143") format("truetype"), url("../font/fontello.svg?95483143#fontello") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
 /* tablet */
 @media (min-width: 700px) and (max-width: 1200px) {
   .social-btns {
@@ -2054,15 +2061,39 @@ body {
   .icon-play {
     font-size: 16px;
     color: #d22856;
-    width: 45px;
-    line-height: 45px;
-    border-radius: 50%;
   }
   .icon-twitter:active,
   .icon-facebook:active,
   .icon-play:active {
     opacity: .3;
   }
+  [class^="icon-"]:before,
+  [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 45px;
+    line-height: 45px;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    border-radius: 50%;
+  }
+  .icon-play:before {
+    content: "\e800";
+  }
+  /* "" */
+  .icon-facebook:before {
+    content: "\e801";
+  }
+  /* "" */
+  .icon-twitter:before {
+    content: "\e802";
+  }
+  /* "" */
 }
 /* desktop */
 @media (min-width: 1200px) {
@@ -2092,14 +2123,26 @@ body {
   .social-btns__item:active {
     border: 3px solid #e9ebec;
   }
+  [class^="icon-"]:before,
+  [class*=" icon-"]:before {
+    font-family: "fontello";
+    font-style: normal;
+    font-weight: normal;
+    speak: none;
+    display: inline-block;
+    text-decoration: inherit;
+    width: 50px;
+    line-height: 50px;
+    text-align: center;
+    font-variant: normal;
+    text-transform: none;
+    border-radius: 50%;
+  }
   .icon-twitter,
   .icon-facebook,
   .icon-play {
     font-size: 18px;
     color: #d22856;
-    width: 50px;
-    line-height: 50px;
-    border-radius: 50%;
   }
   .icon-twitter:active,
   .icon-facebook:active,
