@@ -1,0 +1,89 @@
+// social-btns:
+
+/* tablet */
+
+@media (min-width: 700px) and (max-width: 1200px){
+  .social-btns {
+    flex-grow: 1;
+    text-align: center;
+    min-width: 220px;
+    height: 45px;
+    margin: 0 auto;
+    margin-top: 7px;
+
+    &__item {
+      display:inline-block;
+      margin-right: 12px;
+      width: 45px;
+      height: 45px;
+      border-radius: 50%;
+      border: 3px solid #e9ebec;
+      cursor: pointer;
+      text-align: @text-align;
+
+      &:hover {
+      border: 3px solid @text-color-dark-blue;
+    }
+      &:active {
+        border: 3px solid #e9ebec;
+      }
+    }
+  }
+
+  .icon-twitter,
+  .icon-facebook,
+  .icon-play {
+    font-size: @text-size +2px;
+    color: @text-color-pink;
+
+    &:active {
+      opacity: .3;
+    }
+  }
+}
+
+
+//------------------------- end of tablet ----------------//
+/* desktop */
+
+@media (min-width: 1200px) {
+
+  .social-btns {
+    flex-grow: 0;
+    text-align: @text-align;
+    width: 320px;
+    height: 45px;
+    margin: 0;
+
+    &__item {
+      display: inline-block;
+      margin-right: 12px;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      border: 3px solid #e9ebec;
+      cursor: pointer;
+      text-align: @text-align;
+
+      &:hover {
+        border: 3px solid @text-color-dark-blue;
+      }
+
+      &:active {
+        border: 3px solid #e9ebec;
+      }
+    }
+  }
+
+  .icon-twitter,
+  .icon-facebook,
+  .icon-play {
+    font-size: @text-size-middle;
+    color: @text-color-pink;
+
+    &:active {
+      opacity: .3;
+    }
+  }
+}
+//------------------------- end of desktop ----------------//
