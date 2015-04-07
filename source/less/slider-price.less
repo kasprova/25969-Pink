@@ -1,0 +1,65 @@
+// slider for price:
+
+/* mobile*/
+
+.slider-slides {
+    width: 300%;
+    transition: transform .8s ease;
+}
+
+.price__slider-controls {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 45px;
+}
+
+.price__slider input[type=radio] {
+  display: none;
+}
+
+.price__slider-controls label {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    margin: 0 7px;
+    background-color: #bec2c7;
+    border-radius: 50%;
+    cursor: pointer;
+    vertical-align: middle;
+    transition: background-color .2s;
+
+    &:hover {
+      background-color: #858c95;
+    }
+}
+
+#btn-4:checked ~ .price__slider-controls label[for="btn-4"],
+#btn-5:checked ~ .price__slider-controls label[for="btn-5"],
+#btn-6:checked ~ .price__slider-controls label[for="btn-6"] {
+      width: 12px;
+      height: 12px;
+      background-color: @bg-white;
+      border: 3px solid #273544;
+}
+#btn-4:checked ~ .price__slider-wrapper .price__slider-slides {
+  transform: translate(33.333333%);
+}
+
+#btn-5:checked ~ .price__slider-wrapper .price__slider-slides {
+  transform: translate(0);
+}
+
+#btn-6:checked ~ .price__slider-wrapper .price__slider-slides {
+  transform: translate(-33.33333%);
+}
+
+
+//------------------------- end of mobile ----------------//
+/* tablet & desktop*/
+
+@media (min-width: 700px){
+  .price__slider-controls {
+    display:none;
+  }
+}
